@@ -1,0 +1,13 @@
+*fasf1_cache/2025
+*__pycache__/
+*.pyc
+*.vs
+*fasf1_cache/
+.vscode/
+fastf1_cache/fastf1_http_cache.sqlite
+
+# Ignore specific folder
+fastf1_cache
+
+# Or ignore all folders with that name anywhere in the repo
+**/folder_name/
