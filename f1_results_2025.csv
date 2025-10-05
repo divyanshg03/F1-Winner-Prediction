@@ -278,3 +278,63 @@ season_year,race_round_number,race_name,race_date,circuit_name,driver_name,drive
 2025,14,Hungarian Grand Prix,2025-08-03,Hungaroring,Franco Colapinto,Argentine,Alpine F1 Team,14,18,0.0,69,+47.370,1:20.827,Lapped
 2025,14,Hungarian Grand Prix,2025-08-03,Hungaroring,Pierre Gasly,French,Alpine F1 Team,16,19,0.0,69,+56.344,1:21.433,Lapped
 2025,14,Hungarian Grand Prix,2025-08-03,Hungaroring,Oliver Bearman,British,Haas F1 Team,11,20,0.0,48,N/A,1:21.989,Retired
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Oscar Piastri,Australian,McLaren,1,1,25.0,72,1:38:29.849,1:12.271,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Max Verstappen,Dutch,Red Bull,3,2,18.0,72,+1.271,1:12.921,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Isack Hadjar,French,RB F1 Team,4,3,15.0,72,+3.233,1:13.327,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,George Russell,British,Mercedes,5,4,12.0,72,+5.654,1:13.728,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Alexander Albon,Thai,Williams,15,5,10.0,72,+6.327,1:13.687,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Oliver Bearman,British,Haas F1 Team,20,6,8.0,72,+9.044,1:13.950,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Lance Stroll,Canadian,Aston Martin,19,7,6.0,72,+9.497,1:13.822,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Fernando Alonso,Spanish,Aston Martin,10,8,4.0,72,+11.709,1:13.719,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Yuki Tsunoda,Japanese,Red Bull,12,9,2.0,72,+13.597,1:14.354,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Esteban Ocon,French,Haas F1 Team,18,10,1.0,72,+14.063,1:13.986,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Franco Colapinto,Argentine,Alpine F1 Team,16,11,0.0,72,+14.511,1:13.049,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Liam Lawson,New Zealander,RB F1 Team,8,12,0.0,72,+17.063,1:13.879,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Carlos Sainz,Spanish,Williams,9,13,0.0,72,+17.376,1:13.808,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Nico Hülkenberg,German,Sauber,17,14,0.0,72,+19.725,1:14.912,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Gabriel Bortoleto,Brazilian,Sauber,13,15,0.0,72,+21.565,1:14.307,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Andrea Kimi Antonelli,Italian,Mercedes,11,16,0.0,72,+22.029,1:13.480,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Pierre Gasly,French,Alpine F1 Team,14,17,0.0,72,+23.629,1:15.248,Finished
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Lando Norris,British,McLaren,2,18,0.0,64,+-1:47:38.638,1:12.379,Retired
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Charles Leclerc,Monegasque,Ferrari,6,19,0.0,52,N/A,1:14.557,Retired
+2025,15,Dutch Grand Prix,2025-08-31,Circuit Park Zandvoort,Lewis Hamilton,British,Ferrari,7,20,0.0,22,N/A,1:15.684,Retired
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Max Verstappen,Dutch,Red Bull,1,1,25.0,53,1:13:24.325,1:21.003,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Lando Norris,British,McLaren,2,2,18.0,53,+19.207,1:20.901,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Oscar Piastri,Australian,McLaren,3,3,15.0,53,+21.351,1:21.245,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Charles Leclerc,Monegasque,Ferrari,4,4,12.0,53,+25.624,1:21.294,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,George Russell,British,Mercedes,5,5,10.0,53,+32.881,1:21.800,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Lewis Hamilton,British,Ferrari,10,6,8.0,53,+37.449,1:21.546,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Alexander Albon,Thai,Williams,14,7,6.0,53,+50.537,1:21.368,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Gabriel Bortoleto,Brazilian,Sauber,7,8,4.0,53,+58.484,1:22.139,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Andrea Kimi Antonelli,Italian,Mercedes,6,9,2.0,53,+59.762,1:21.968,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Isack Hadjar,French,RB F1 Team,19,10,1.0,53,+1:03.891,1:22.133,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Carlos Sainz,Spanish,Williams,13,11,0.0,53,+1:04.469,1:21.740,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Oliver Bearman,British,Haas F1 Team,11,12,0.0,53,+1:19.288,1:21.820,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Yuki Tsunoda,Japanese,Red Bull,9,13,0.0,53,+1:20.701,1:22.712,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Liam Lawson,New Zealander,RB F1 Team,18,14,0.0,53,+1:22.351,1:22.777,Finished
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Esteban Ocon,French,Haas F1 Team,15,15,0.0,52,+2.135,1:22.892,Lapped
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Pierre Gasly,French,Alpine F1 Team,20,16,0.0,52,+5.837,1:22.185,Lapped
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Franco Colapinto,Argentine,Alpine F1 Team,17,17,0.0,52,+7.448,1:22.239,Lapped
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Lance Stroll,Canadian,Aston Martin,16,18,0.0,52,+9.301,1:22.164,Lapped
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Fernando Alonso,Spanish,Aston Martin,8,19,0.0,24,N/A,1:23.757,Retired
+2025,16,Italian Grand Prix,2025-09-07,Autodromo Nazionale di Monza,Nico Hülkenberg,German,Sauber,12,20,0.0,0,N/A,N/A,Did not start
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Max Verstappen,Dutch,Red Bull,1,1,25.0,51,1:33:26.408,1:43.388,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,George Russell,British,Mercedes,5,2,18.0,51,+14.609,1:43.754,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Carlos Sainz,Spanish,Williams,2,3,15.0,51,+19.199,1:43.972,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Andrea Kimi Antonelli,Italian,Mercedes,4,4,12.0,51,+21.760,1:44.091,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Liam Lawson,New Zealander,RB F1 Team,3,5,10.0,51,+33.290,1:44.531,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Yuki Tsunoda,Japanese,Red Bull,6,6,8.0,51,+33.808,1:44.434,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Lando Norris,British,McLaren,7,7,6.0,51,+34.227,1:44.155,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Lewis Hamilton,British,Ferrari,12,8,4.0,51,+36.310,1:43.977,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Charles Leclerc,Monegasque,Ferrari,10,9,2.0,51,+36.774,1:44.274,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Isack Hadjar,French,RB F1 Team,8,10,1.0,51,+38.982,1:43.884,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Gabriel Bortoleto,Brazilian,Sauber,13,11,0.0,51,+1:07.606,1:44.930,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Oliver Bearman,British,Haas F1 Team,15,12,0.0,51,+1:08.262,1:44.288,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Alexander Albon,Thai,Williams,19,13,0.0,51,+1:12.870,1:44.152,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Esteban Ocon,French,Haas F1 Team,20,14,0.0,51,+1:17.580,1:45.388,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Fernando Alonso,Spanish,Aston Martin,11,15,0.0,51,+1:18.707,1:45.002,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Nico Hülkenberg,German,Sauber,17,16,0.0,51,+1:20.237,1:44.370,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Lance Stroll,Canadian,Aston Martin,14,17,0.0,51,+1:36.392,1:45.083,Finished
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Pierre Gasly,French,Alpine F1 Team,18,18,0.0,50,+3.865,1:45.492,Lapped
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Franco Colapinto,Argentine,Alpine F1 Team,16,19,0.0,50,+6.325,1:46.055,Lapped
+2025,17,Azerbaijan Grand Prix,2025-09-21,Baku City Circuit,Oscar Piastri,Australian,McLaren,9,20,0.0,0,N/A,N/A,Retired
