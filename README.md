@@ -24,6 +24,15 @@ What survives scrutiny:
 
 ![edge](reports/figures/02_edge_over_time.png)
 
+## Try it: interactive demo
+
+```bash
+pip install fastapi uvicorn
+python -m uvicorn app.server:app --port 8000     # then open http://localhost:8000
+```
+
+Pick any of the 268 races (188 with honest walk-forward calls), see the probabilities next to the real winner, view the frozen pre-race call, and edit the starting grid to see what a slot is worth. Grid what-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
+
 ## Forward predictions
 
 `scripts/predict_next.py` trains on every completed race, scores the next one, and freezes a timestamped JSON (with git commit) into [`predictions/`](predictions/) **before the race**. Those files are the audit trail: the repo records the call, then the result.
@@ -102,6 +111,7 @@ scripts/       run_backtest.py  holdout_report.py  make_figures.py  predict_next
 tests/         test_leakage.py
 predictions/   frozen pre-race predictions (the audit trail)
 reports/       backtest scores, metrics tables, figures
+app/           FastAPI + single-page demo UI
 articles/      Substack essay + LinkedIn post
 legacy/        v1 notebooks and data (kept on purpose)
 ```
