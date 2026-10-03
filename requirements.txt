@@ -7,3 +7,5 @@ torch>=2.2
 matplotlib>=3.8
 requests>=2.31
 pytest>=8
+fastapi>=0.110
+uvicorn>=0.29
