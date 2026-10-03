@@ -101,3 +101,14 @@ def summarize(res: pd.DataFrame, names: list[str], n_boot: int = 2000, seed: int
                          top1_hi=np.percentile(t1, 97.5), top3=m.top3.mean(), logloss=m.logloss.mean(),
                          ll_lo=np.percentile(ll, 2.5), ll_hi=np.percentile(ll, 97.5), brier=m.brier.mean()))
     return pd.DataFrame(rows)
+
+
+def paired_diff(res: pd.DataFrame, a: str, b: str, mask=None, n_boot: int = 5000, seed: int = 0) -> dict:
+    """Mean per-race log-loss advantage of model `a` over `b` (positive = a better) with a bootstrap CI."""
+    sel = res if mask is None else res[mask]
+    ma = race_metrics(sel, probs(sel, a)).set_index("race_key")["logloss"]
+    mb = race_metrics(sel, probs(sel, b)).set_index("race_key")["logloss"]
+    d = (mb - ma).dropna().to_numpy()
+    rng = np.random.default_rng(seed)
+    bs = np.array([d[rng.integers(0, len(d), len(d))].mean() for _ in range(n_boot)])
+    return dict(a=a, b=b, races=len(d), diff=float(d.mean()), lo=float(np.percentile(bs, 2.5)), hi=float(np.percentile(bs, 97.5)))

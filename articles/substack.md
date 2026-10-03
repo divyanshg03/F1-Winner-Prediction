@@ -62,9 +62,14 @@ Mostly, yes. When the model says 30%, drivers win about 30% of the time. The one
 
 ## What I deliberately left out
 
-- **Neural sequence models.** With around 270 races the data feels thin for them, but I haven't re-tested that. My v1 Transformer was broken, so it proves nothing either way.
 - **Anything I couldn't test.** No tyre strategy, no weather, no safety-car model. These matter, and I don't have the data to claim anything about them.
 - **A fair fight with bookmakers.** Betting odds are the real benchmark and I don't have them. Beating the grid is a much lower bar, and I'd rather say that than imply otherwise.
+
+## Did the fancy neural nets help?
+
+My v1 had a Transformer, but its loss was NaN, so it proved nothing. This time I tested sequence models properly, with the protocol written down before I ran it: same 188 races, same walk-forward rules, three seeds, no tuning on the test set.
+
+The GRUs **tied** the simple tabular model. The Transformer was **significantly worse** (0.10 nats/race, interval excludes zero). With about 270 races, there isn't enough data for the extra machinery to pay for itself. The history did carry real signal (all three beat the grid-only baseline), just no more than a handful of hand-built features.
 
 ## The part where I can be wrong in public
 

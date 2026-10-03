@@ -1,0 +1,53 @@
+calibration races: 59  test races: 107
+{'pass_thr': 0.014, 'start_sigma': 0.6, 'pace_sigma_mult': 0.45} 1.5639
+{'pass_thr': 0.014, 'start_sigma': 0.6, 'pace_sigma_mult': 0.6} 1.5559
+{'pass_thr': 0.014, 'start_sigma': 0.6, 'pace_sigma_mult': 0.8} 1.5359
+{'pass_thr': 0.014, 'start_sigma': 1.2, 'pace_sigma_mult': 0.45} 1.5752
+{'pass_thr': 0.014, 'start_sigma': 1.2, 'pace_sigma_mult': 0.6} 1.5474
+{'pass_thr': 0.014, 'start_sigma': 1.2, 'pace_sigma_mult': 0.8} 1.5523
+{'pass_thr': 0.022, 'start_sigma': 0.6, 'pace_sigma_mult': 0.45} 1.4757
+{'pass_thr': 0.022, 'start_sigma': 0.6, 'pace_sigma_mult': 0.6} 1.4992
+{'pass_thr': 0.022, 'start_sigma': 0.6, 'pace_sigma_mult': 0.8} 1.5386
+{'pass_thr': 0.022, 'start_sigma': 1.2, 'pace_sigma_mult': 0.45} 1.4931
+{'pass_thr': 0.022, 'start_sigma': 1.2, 'pace_sigma_mult': 0.6} 1.4998
+{'pass_thr': 0.022, 'start_sigma': 1.2, 'pace_sigma_mult': 0.8} 1.5258
+{'pass_thr': 0.035, 'start_sigma': 0.6, 'pace_sigma_mult': 0.45} 1.4438
+{'pass_thr': 0.035, 'start_sigma': 0.6, 'pace_sigma_mult': 0.6} 1.4501
+{'pass_thr': 0.035, 'start_sigma': 0.6, 'pace_sigma_mult': 0.8} 1.4601
+{'pass_thr': 0.035, 'start_sigma': 1.2, 'pace_sigma_mult': 0.45} 1.5067
+{'pass_thr': 0.035, 'start_sigma': 1.2, 'pace_sigma_mult': 0.6} 1.5196
+{'pass_thr': 0.035, 'start_sigma': 1.2, 'pace_sigma_mult': 0.8} 1.5344
+{'pass_thr': 0.055, 'start_sigma': 0.6, 'pace_sigma_mult': 0.45} 1.4587
+{'pass_thr': 0.055, 'start_sigma': 0.6, 'pace_sigma_mult': 0.6} 1.4644
+{'pass_thr': 0.055, 'start_sigma': 0.6, 'pace_sigma_mult': 0.8} 1.4757
+{'pass_thr': 0.055, 'start_sigma': 1.2, 'pace_sigma_mult': 0.45} 1.5383
+{'pass_thr': 0.055, 'start_sigma': 1.2, 'pace_sigma_mult': 0.6} 1.5404
+{'pass_thr': 0.055, 'start_sigma': 1.2, 'pace_sigma_mult': 0.8} 1.5639
+FROZEN PARAMS: {'pass_thr': 0.035, 'start_sigma': 0.6, 'pace_sigma_mult': 0.45}
+  scored 0/107 2022-01
+  scored 20/107 2022-21
+  scored 40/107 2023-19
+  scored 60/107 2024-17
+  scored 80/107 2025-13
+  scored 100/107 2026-09
+
+PACE MODEL RMSE (fraction of a lap; lower is better)
+{'mean': 0.00976, 'quali_only': 0.00903, 'full': 0.00584}
+
+races compared: 107
+     model  races  top1  top3  logloss  ll_lo  ll_hi  brier
+grid_logit    107 0.570 0.879    1.485  1.232  1.790  0.623
+  ens_post    107 0.617 0.916    1.108  0.913  1.318  0.527
+       sim    107 0.542 0.907    1.480  1.391  1.574  0.687
+     blend    107 0.607 0.907    1.180  1.051  1.320  0.557
+    a          b  races   diff     lo     hi         slice
+  sim grid_logit    107  0.006 -0.198  0.238     all 2022+
+  sim grid_logit     63 -0.169 -0.413  0.125 2024+ holdout
+  sim   ens_post    107 -0.371 -0.518 -0.204     all 2022+
+  sim   ens_post     63 -0.228 -0.426 -0.016 2024+ holdout
+blend   ens_post    107 -0.071 -0.142  0.010     all 2022+
+blend   ens_post     63 -0.014 -0.113  0.093 2024+ holdout
+blend grid_logit    107  0.306  0.084  0.544     all 2022+
+blend grid_logit     63  0.045 -0.175  0.321 2024+ holdout
+
+DIAGNOSTICS  pole win: sim 0.277 vs actual 0.570 | SC race share: sim 0.59 vs actual 0.55
