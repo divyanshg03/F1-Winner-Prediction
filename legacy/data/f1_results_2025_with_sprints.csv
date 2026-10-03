@@ -418,3 +418,183 @@ season_year,race_round_number,race_name,race_date,circuit_name,session_type,driv
 2025,18,Singapore Grand Prix,2025-10-05,Marina Bay Street Circuit,Race,Esteban Ocon,French,Haas F1 Team,17,18,0.0,61,+47.133,1:36.646,Lapped
 2025,18,Singapore Grand Prix,2025-10-05,Marina Bay Street Circuit,Race,Pierre Gasly,French,Alpine F1 Team,19,19,0.0,61,+47.461,1:34.573,Lapped
 2025,18,Singapore Grand Prix,2025-10-05,Marina Bay Street Circuit,Race,Nico Hülkenberg,German,Sauber,11,20,0.0,61,+49.040,1:35.404,Lapped
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Max Verstappen,Dutch,Red Bull,1,1,8.0,19,37:58.229,1:36.527,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,George Russell,British,Mercedes,5,2,7.0,19,+0.395,1:36.876,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Carlos Sainz,Spanish,Williams,7,3,6.0,19,+0.791,1:37.510,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Lewis Hamilton,British,Ferrari,8,4,5.0,19,+1.224,1:37.096,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Charles Leclerc,Monegasque,Ferrari,10,5,4.0,19,+1.825,1:37.391,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Alexander Albon,Thai,Williams,9,6,3.0,19,+2.576,1:38.220,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Yuki Tsunoda,Japanese,Red Bull,18,7,2.0,19,+2.976,1:38.268,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Andrea Kimi Antonelli,Italian,Mercedes,11,8,1.0,19,+4.147,1:37.758,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Liam Lawson,New Zealander,RB F1 Team,15,9,0.0,19,+4.804,1:38.654,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Pierre Gasly,French,Alpine F1 Team,13,10,0.0,19,+5.126,1:38.932,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Gabriel Bortoleto,Brazilian,Sauber,20,11,0.0,19,+5.649,1:39.006,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Isack Hadjar,French,RB F1 Team,12,12,0.0,19,+6.228,1:39.057,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Nico Hülkenberg,German,Sauber,4,13,0.0,19,+6.624,1:39.069,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Franco Colapinto,Argentine,Alpine F1 Team,17,14,0.0,19,+8.006,1:39.235,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Oliver Bearman,British,Haas F1 Team,16,15,0.0,19,+13.576,1:38.435,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Esteban Ocon,French,Haas F1 Team,19,16,0.0,15,N/A,1:38.701,Retired
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Lance Stroll,Canadian,Aston Martin,14,17,0.0,15,N/A,1:38.766,Retired
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Lando Norris,British,McLaren,2,18,0.0,0,N/A,N/A,Retired
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Oscar Piastri,Australian,McLaren,3,19,0.0,0,N/A,N/A,Retired
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Sprint,Fernando Alonso,Spanish,Aston Martin,6,20,0.0,0,N/A,N/A,Retired
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Max Verstappen,Dutch,Red Bull,1,1,25.0,56,1:34:00.161,1:37.991,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Lando Norris,British,McLaren,2,2,18.0,56,+7.959,1:37.620,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Charles Leclerc,Monegasque,Ferrari,3,3,15.0,56,+15.373,1:38.231,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Lewis Hamilton,British,Ferrari,5,4,12.0,56,+28.536,1:38.361,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Oscar Piastri,Australian,McLaren,6,5,10.0,56,+29.678,1:38.564,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,George Russell,British,Mercedes,4,6,8.0,56,+33.456,1:38.224,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Yuki Tsunoda,Japanese,Red Bull,13,7,6.0,56,+52.714,1:38.803,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Nico Hülkenberg,German,Sauber,11,8,4.0,56,+57.249,1:38.372,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Oliver Bearman,British,Haas F1 Team,8,9,2.0,56,+1:04.722,1:39.119,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Fernando Alonso,Spanish,Aston Martin,10,10,1.0,56,+1:10.001,1:38.789,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Liam Lawson,New Zealander,RB F1 Team,12,11,0.0,56,+1:13.209,1:38.983,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Lance Stroll,Canadian,Aston Martin,19,12,0.0,56,+1:14.778,1:39.071,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Andrea Kimi Antonelli,Italian,Mercedes,7,13,0.0,56,+1:15.746,1:37.577,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Alexander Albon,Thai,Williams,18,14,0.0,56,+1:20.000,1:38.328,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Esteban Ocon,French,Haas F1 Team,17,15,0.0,56,+1:23.043,1:39.263,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Isack Hadjar,French,RB F1 Team,20,16,0.0,56,+1:32.807,1:38.724,Finished
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Franco Colapinto,Argentine,Alpine F1 Team,15,17,0.0,55,+2.307,1:39.173,Lapped
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Gabriel Bortoleto,Brazilian,Sauber,16,18,0.0,55,+3.557,1:38.275,Lapped
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Pierre Gasly,French,Alpine F1 Team,14,19,0.0,55,+6.155,1:39.270,Lapped
+2025,19,United States Grand Prix,2025-10-19,Circuit of the Americas,Race,Carlos Sainz,Spanish,Williams,9,20,0.0,5,N/A,1:40.327,Retired
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Lando Norris,British,McLaren,1,1,25.0,71,1:37:58.574,1:20.764,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Charles Leclerc,Monegasque,Ferrari,2,2,18.0,71,+30.324,1:21.588,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Max Verstappen,Dutch,Red Bull,5,3,15.0,71,+31.049,1:21.108,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Oliver Bearman,British,Haas F1 Team,9,4,12.0,71,+40.955,1:20.705,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Oscar Piastri,Australian,McLaren,7,5,10.0,71,+42.065,1:20.422,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Andrea Kimi Antonelli,Italian,Mercedes,6,6,8.0,71,+47.837,1:20.826,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,George Russell,British,Mercedes,4,7,6.0,71,+50.287,1:20.052,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Lewis Hamilton,British,Ferrari,3,8,4.0,71,+56.446,1:20.601,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Esteban Ocon,French,Haas F1 Team,11,9,2.0,71,+1:15.464,1:21.869,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Gabriel Bortoleto,Brazilian,Sauber,16,10,1.0,71,+1:16.863,1:21.121,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Yuki Tsunoda,Japanese,Red Bull,10,11,0.0,71,+1:19.048,1:21.486,Finished
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Alexander Albon,Thai,Williams,17,12,0.0,70,+2.450,1:20.480,Lapped
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Isack Hadjar,French,RB F1 Team,8,13,0.0,70,+6.656,1:21.714,Lapped
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Lance Stroll,Canadian,Aston Martin,19,14,0.0,70,+7.035,1:20.593,Lapped
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Pierre Gasly,French,Alpine F1 Team,18,15,0.0,70,+44.080,1:22.271,Lapped
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Franco Colapinto,Argentine,Alpine F1 Team,20,16,0.0,70,+44.376,1:21.342,Lapped
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Carlos Sainz,Spanish,Williams,12,17,0.0,67,+-1:55:35.558,1:20.098,Retired
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Fernando Alonso,Spanish,Aston Martin,14,18,0.0,34,N/A,1:21.708,Retired
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Nico Hülkenberg,German,Sauber,13,19,0.0,25,N/A,1:23.091,Retired
+2025,20,Mexico City Grand Prix,2025-10-26,Autódromo Hermanos Rodríguez,Race,Liam Lawson,New Zealander,RB F1 Team,15,20,0.0,5,N/A,1:25.124,Retired
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Lando Norris,British,McLaren,1,1,8.0,24,53:25.928,1:12.120,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Andrea Kimi Antonelli,Italian,Mercedes,2,2,7.0,24,+0.845,1:12.138,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,George Russell,British,Mercedes,4,3,6.0,24,+2.318,1:12.263,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Max Verstappen,Dutch,Red Bull,6,4,5.0,24,+4.423,1:12.617,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Charles Leclerc,Monegasque,Ferrari,8,5,4.0,24,+16.483,1:13.111,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Fernando Alonso,Spanish,Aston Martin,5,6,3.0,24,+18.306,1:13.226,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Lewis Hamilton,British,Ferrari,11,7,2.0,24,+18.603,1:12.955,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Pierre Gasly,French,Alpine F1 Team,13,8,1.0,24,+19.366,1:13.155,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Lance Stroll,Canadian,Aston Martin,7,9,0.0,24,+23.933,1:13.197,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Isack Hadjar,French,RB F1 Team,9,10,0.0,24,+29.548,1:13.444,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Esteban Ocon,French,Haas F1 Team,18,11,0.0,24,+31.000,1:13.791,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Oliver Bearman,British,Haas F1 Team,15,12,0.0,24,+36.334,1:13.757,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Yuki Tsunoda,Japanese,Red Bull,19,13,0.0,24,+38.462,1:13.921,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Carlos Sainz,Spanish,Williams,20,14,0.0,24,+38.951,1:13.712,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Nico Hülkenberg,German,Sauber,10,15,0.0,24,+42.349,1:12.186,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Liam Lawson,New Zealander,RB F1 Team,17,16,0.0,24,+43.090,1:13.896,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Alexander Albon,Thai,Williams,12,17,0.0,24,+55.456,1:13.372,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Gabriel Bortoleto,Brazilian,Sauber,14,18,0.0,23,+-1:59:11.640,1:13.517,Retired
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Oscar Piastri,Australian,McLaren,3,19,0.0,5,N/A,1:12.992,Retired
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Sprint,Franco Colapinto,Argentine,Alpine F1 Team,16,20,0.0,5,N/A,1:14.056,Retired
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Lando Norris,British,McLaren,1,1,25.0,71,1:32:01.596,1:13.040,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Andrea Kimi Antonelli,Italian,Mercedes,2,2,18.0,71,+10.388,1:13.123,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Max Verstappen,Dutch,Red Bull,19,3,15.0,71,+10.750,1:12.447,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,George Russell,British,Mercedes,6,4,12.0,71,+15.267,1:13.097,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Oscar Piastri,Australian,McLaren,4,5,10.0,71,+15.749,1:12.742,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Oliver Bearman,British,Haas F1 Team,8,6,8.0,71,+29.630,1:13.483,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Liam Lawson,New Zealander,RB F1 Team,7,7,6.0,71,+52.642,1:14.029,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Isack Hadjar,French,RB F1 Team,5,8,4.0,71,+52.873,1:13.694,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Nico Hülkenberg,German,Sauber,10,9,2.0,71,+53.324,1:13.474,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Pierre Gasly,French,Alpine F1 Team,9,10,1.0,71,+53.914,1:13.736,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Alexander Albon,Thai,Williams,12,11,0.0,71,+54.184,1:12.400,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Esteban Ocon,French,Haas F1 Team,20,12,0.0,71,+54.696,1:13.481,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Carlos Sainz,Spanish,Williams,15,13,0.0,71,+55.420,1:13.683,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Fernando Alonso,Spanish,Aston Martin,11,14,0.0,71,+55.766,1:13.312,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Franco Colapinto,Argentine,Alpine F1 Team,16,15,0.0,71,+57.777,1:12.816,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Lance Stroll,Canadian,Aston Martin,14,16,0.0,71,+58.247,1:13.094,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Yuki Tsunoda,Japanese,Red Bull,17,17,0.0,71,+1:09.176,1:12.774,Finished
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Lewis Hamilton,British,Ferrari,13,18,0.0,37,N/A,1:13.844,Retired
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Charles Leclerc,Monegasque,Ferrari,3,19,0.0,5,N/A,1:43.560,Retired
+2025,21,São Paulo Grand Prix,2025-11-09,Autódromo José Carlos Pace,Race,Gabriel Bortoleto,Brazilian,Sauber,18,20,0.0,0,N/A,N/A,Retired
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Max Verstappen,Dutch,Red Bull,2,1,25.0,50,1:21:08.429,1:33.365,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,George Russell,British,Mercedes,4,2,18.0,50,+23.546,1:34.592,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Andrea Kimi Antonelli,Italian,Mercedes,17,3,15.0,50,+30.488,1:33.998,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Charles Leclerc,Monegasque,Ferrari,9,4,12.0,50,+30.678,1:34.304,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Carlos Sainz,Spanish,Williams,3,5,10.0,50,+34.924,1:34.496,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Isack Hadjar,French,RB F1 Team,8,6,8.0,50,+45.257,1:34.620,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Nico Hülkenberg,German,Sauber,11,7,6.0,50,+51.134,1:34.592,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Lewis Hamilton,British,Ferrari,19,8,4.0,50,+59.369,1:34.553,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Esteban Ocon,French,Haas F1 Team,13,9,2.0,50,+1:00.635,1:34.557,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Oliver Bearman,British,Haas F1 Team,14,10,1.0,50,+1:10.549,1:34.519,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Fernando Alonso,Spanish,Aston Martin,7,11,0.0,50,+1:25.308,1:35.629,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Yuki Tsunoda,Japanese,Red Bull,20,12,0.0,50,+1:26.974,1:34.967,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Pierre Gasly,French,Alpine F1 Team,10,13,0.0,50,+1:31.702,1:35.674,Finished
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Liam Lawson,New Zealander,RB F1 Team,6,14,0.0,49,+3.291,1:34.837,Lapped
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Franco Colapinto,Argentine,Alpine F1 Team,15,15,0.0,49,+10.459,1:35.780,Lapped
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Alexander Albon,Thai,Williams,16,16,0.0,35,N/A,1:35.184,Retired
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Gabriel Bortoleto,Brazilian,Sauber,18,17,0.0,2,N/A,N/A,Retired
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Lance Stroll,Canadian,Aston Martin,12,18,0.0,0,N/A,N/A,Retired
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Lando Norris,British,McLaren,1,19,0.0,50,N/A,N/A,Disqualified
+2025,22,Las Vegas Grand Prix,2025-11-23,Las Vegas Strip Street Circuit,Race,Oscar Piastri,Australian,McLaren,5,20,0.0,50,N/A,N/A,Disqualified
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Oscar Piastri,Australian,McLaren,1,1,8.0,19,26:51.033,1:23.988,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,George Russell,British,Mercedes,2,2,7.0,19,+4.951,1:24.564,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Lando Norris,British,McLaren,3,3,6.0,19,+6.279,1:24.507,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Max Verstappen,Dutch,Red Bull,6,4,5.0,19,+9.054,1:24.541,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Yuki Tsunoda,Japanese,Red Bull,5,5,4.0,19,+19.327,1:24.816,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Andrea Kimi Antonelli,Italian,Mercedes,7,6,3.0,19,+21.391,1:24.464,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Fernando Alonso,Spanish,Aston Martin,4,7,2.0,19,+24.556,1:25.415,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Carlos Sainz,Spanish,Williams,8,8,1.0,19,+27.333,1:25.463,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Isack Hadjar,French,RB F1 Team,11,9,0.0,19,+28.206,1:25.404,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Alexander Albon,Thai,Williams,10,10,0.0,19,+28.925,1:25.509,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Gabriel Bortoleto,Brazilian,Sauber,13,11,0.0,19,+32.966,1:25.663,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Oliver Bearman,British,Haas F1 Team,12,12,0.0,19,+34.529,1:25.593,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Charles Leclerc,Monegasque,Ferrari,9,13,0.0,19,+35.182,1:25.638,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Liam Lawson,New Zealander,RB F1 Team,16,14,0.0,19,+36.916,1:25.620,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Esteban Ocon,French,Haas F1 Team,15,15,0.0,19,+38.838,1:25.555,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Nico Hülkenberg,German,Sauber,14,16,0.0,19,+39.638,1:25.678,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Lewis Hamilton,British,Ferrari,18,17,0.0,19,+46.171,1:25.782,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Pierre Gasly,French,Alpine F1 Team,19,18,0.0,19,+1:09.534,1:23.188,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Lance Stroll,Canadian,Aston Martin,17,19,0.0,19,+1:17.960,1:23.585,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Sprint,Franco Colapinto,Argentine,Alpine F1 Team,20,20,0.0,19,+1:20.804,1:23.765,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Max Verstappen,Dutch,Red Bull,3,1,25.0,57,1:24:38.241,1:23.498,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Oscar Piastri,Australian,McLaren,1,2,18.0,57,+7.995,1:22.996,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Carlos Sainz,Spanish,Williams,7,3,15.0,57,+22.665,1:23.859,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Lando Norris,British,McLaren,2,4,12.0,57,+23.315,1:23.197,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Andrea Kimi Antonelli,Italian,Mercedes,5,5,10.0,57,+28.317,1:23.955,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,George Russell,British,Mercedes,4,6,8.0,57,+48.599,1:23.198,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Fernando Alonso,Spanish,Aston Martin,8,7,6.0,57,+54.045,1:23.940,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Charles Leclerc,Monegasque,Ferrari,10,8,4.0,57,+56.785,1:24.432,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Liam Lawson,New Zealander,RB F1 Team,12,9,2.0,57,+1:00.073,1:23.971,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Yuki Tsunoda,Japanese,Red Bull,15,10,1.0,57,+1:01.770,1:24.139,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Alexander Albon,Thai,Williams,14,11,0.0,57,+1:06.931,1:24.261,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Lewis Hamilton,British,Ferrari,17,12,0.0,57,+1:17.730,1:24.848,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Gabriel Bortoleto,Brazilian,Sauber,19,13,0.0,57,+1:24.812,1:25.233,Finished
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Franco Colapinto,Argentine,Alpine F1 Team,20,14,0.0,56,+3.283,1:25.644,Lapped
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Esteban Ocon,French,Haas F1 Team,16,15,0.0,56,+4.253,1:25.056,Lapped
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Pierre Gasly,French,Alpine F1 Team,9,16,0.0,56,+4.941,1:25.376,Lapped
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Lance Stroll,Canadian,Aston Martin,18,17,0.0,55,+-1:58:56.962,1:23.484,Retired
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Isack Hadjar,French,RB F1 Team,6,18,0.0,55,+-1:59:14.083,1:24.317,Retired
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Oliver Bearman,British,Haas F1 Team,13,19,0.0,41,N/A,1:24.930,Retired
+2025,23,Qatar Grand Prix,2025-11-30,Losail International Circuit,Race,Nico Hülkenberg,German,Sauber,11,20,0.0,6,N/A,1:28.139,Retired
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Max Verstappen,Dutch,Red Bull,1,1,25.0,58,1:26:07.469,1:27.625,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Oscar Piastri,Australian,McLaren,3,2,18.0,58,+12.594,1:26.765,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Lando Norris,British,McLaren,2,3,15.0,58,+16.572,1:26.818,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Charles Leclerc,Monegasque,Ferrari,5,4,12.0,58,+23.279,1:26.725,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,George Russell,British,Mercedes,4,5,10.0,58,+48.563,1:28.599,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Fernando Alonso,Spanish,Aston Martin,6,6,8.0,58,+1:07.562,1:28.279,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Esteban Ocon,French,Haas F1 Team,8,7,6.0,58,+1:09.876,1:28.655,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Lewis Hamilton,British,Ferrari,16,8,4.0,58,+1:12.670,1:28.094,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Nico Hülkenberg,German,Sauber,18,9,2.0,58,+1:19.014,1:27.050,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Lance Stroll,Canadian,Aston Martin,15,10,1.0,58,+1:19.523,1:27.626,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Gabriel Bortoleto,Brazilian,Sauber,7,11,0.0,58,+1:21.043,1:29.114,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Oliver Bearman,British,Haas F1 Team,11,12,0.0,58,+1:21.166,1:28.976,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Carlos Sainz,Spanish,Williams,12,13,0.0,58,+1:22.158,1:29.052,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Yuki Tsunoda,Japanese,Red Bull,10,14,0.0,58,+1:23.794,1:28.557,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Andrea Kimi Antonelli,Italian,Mercedes,14,15,0.0,58,+1:24.399,1:28.029,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Alexander Albon,Thai,Williams,17,16,0.0,58,+1:30.327,1:28.367,Finished
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Isack Hadjar,French,RB F1 Team,9,17,0.0,57,+1.327,1:29.375,Lapped
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Liam Lawson,New Zealander,RB F1 Team,13,18,0.0,57,+4.659,1:28.886,Lapped
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Pierre Gasly,French,Alpine F1 Team,19,19,0.0,57,+11.908,1:27.767,Lapped
+2025,24,Abu Dhabi Grand Prix,2025-12-07,Yas Marina Circuit,Race,Franco Colapinto,Argentine,Alpine F1 Team,20,20,0.0,57,+14.003,1:27.710,Lapped

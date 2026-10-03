@@ -1,172 +1,101 @@
-# F1 Winner Predictor 🏎️
+# F1 Winner Predictor
 
-A machine learning project that predicts Formula 1 race winners using historical race data and performance analytics.
+**Calibrated, backtested probabilities for who wins a Formula 1 Grand Prix, and an honest account of how much anyone can know.**
 
-## 📋 Project Overview
+![headline](reports/figures/01_headline.png)
 
-This project aims to predict Formula 1 race winners by analyzing historical racing data from 2016 to 2025. Using various machine learning techniques and comprehensive Formula 1 datasets, the model considers multiple factors such as driver performance, constructor strength, circuit characteristics, and historical trends to make accurate predictions.
+## The short version
 
-## 🎯 Features
+I tested whether a model can beat the obvious bet ("pole-sitter wins") over **188 real races (2018 to Sep 2026)**, refitting before every race so nothing ever sees the future.
 
-- **Historical Data Analysis**: Comprehensive analysis of F1 race results from 2016-2025
-- **Driver Performance Metrics**: Analysis of driver statistics including grid positions, final positions, points, and lap times
-- **Constructor Analysis**: Team performance evaluation and trends
-- **Circuit-Specific Insights**: Track-specific performance patterns and characteristics
-- **Machine Learning Predictions**: Advanced ML models for race winner prediction
-- **Interactive Visualizations**: Data visualization and exploratory data analysis
+| | Winner log-loss ↓ | Top-1 | Top-3 |
+|---|---|---|---|
+| Pure guessing (20 drivers) | 3.00 | 5% | 15% |
+| Pole-sitter / starting grid only | 1.52 | 53% | 87% |
+| **Before qualifying** (form only) | 1.53 | 45% | 77% |
+| **After qualifying** (full model) | **1.22** | **59%** | **90%** |
 
-## 📊 Dataset
+What survives scrutiny:
 
-The project uses multiple datasets containing F1 race results:
+- **The probabilities are good.** Paired against the grid-only model, the full model improves log-loss by **0.30 nats/race (95% CI 0.14 to 0.47)**. Calibration is close to the diagonal ([figure](reports/figures/03_calibration.png)).
+- **The accuracy edge over "pole wins" is *not* statistically significant** (59% vs 53%, intervals overlap). Don't read it as "the model picks winners better than the grid does".
+- **The edge is era-dependent.** It was large while one team dominated (+0.42 nats/race, 2018–23) and **unproven in 2024–26** (+0.06, CI −0.20 to +0.36, 63 races). When the field is close, the grid already tells you almost everything ([figure](reports/figures/02_edge_over_time.png)).
+- **Before qualifying, form alone is no better than knowing the grid** and collapses under regulation resets (2026: 3 of 15 right).
 
-- `f1_results_2016_2025.csv` - Complete dataset (2016-2025)
-- `f1_results_2019_2025.csv` - Recent era dataset (2019-2025)
-- `f1_results_2022_2025.csv` - Current regulation era (2022-2025)
+![edge](reports/figures/02_edge_over_time.png)
 
-### Data Features
+## Forward predictions
 
-Each dataset includes the following key features:
-- **Season Information**: Year and race round number
-- **Race Details**: Race name, date, and circuit information
-- **Driver Data**: Name, nationality, and constructor
-- **Performance Metrics**: Grid position, final position, points earned
-- **Race Statistics**: Laps completed, race time, fastest lap, and race status
+`scripts/predict_next.py` trains on every completed race, scores the next one, and freezes a timestamped JSON (with git commit) into [`predictions/`](predictions/) **before the race**. Those files are the audit trail: the repo records the call, then the result.
 
-## 🛠️ Technology Stack
+## What was wrong with v1 (and why this exists)
 
-- **Python**: Primary programming language
-- **FastF1**: Official F1 data API for real-time and historical data
-- **PyTorch**: Deep learning framework for model development
-- **Pandas**: Data manipulation and analysis
-- **Matplotlib/Seaborn**: Data visualization
-- **Jupyter Notebooks**: Interactive development and analysis
+The first version (2025, kept in [`legacy/`](legacy/)) reported **95.7% accuracy**. That number was meaningless: predicting *"nobody wins"* scores 95.0%, because only 1 in 20 driver-rows is a winner. The audit that led to v2 found:
 
-## 📁 Project Structure
+- `driver_dnf_rate` was **always zero**: it searched for the string "DNF", which never appears in the data (statuses are `Retired`, `Collision`, `Engine`...).
+- The Transformer trained on **NaN loss** for every epoch and reported accuracy from garbage weights.
+- Random train/test splits over **overlapping 5-race windows** (leakage), early stopping on the test set, and prediction-time grid positions filled with a driver's *historical average*.
+- Only 183 races, 36 of them in the test set, with no baseline comparison.
 
-```
-F1-Winner-Predictor/
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── data/                          # Raw data storage
-│   └── fastf1_cache/             # FastF1 API cache
-├── notebooks/                     # Jupyter notebooks
-│   ├── EDA.ipynb                 # Exploratory Data Analysis
-│   ├── f1_results_*.csv          # Historical race datasets
-│   └── data/                     # Notebook-specific data
-├── src/                          # Source code (to be developed)
-└── ff1_cache/                    # Additional FastF1 cache data
-```
+## What v2 does differently
 
-## 🚀 Getting Started
+| | v1 | v2 |
+|---|---|---|
+| Framing | 20 independent yes/no problems | one softmax over the field per race |
+| Evaluation | random split, accuracy | walk-forward refit before every race; log-loss, Brier, top-k, paired bootstrap CIs |
+| Baselines | none | uniform, pole, grid-only logit |
+| Data | 183 races ending mid-2025 | 2014–2026, results + qualifying + sprints (267 races) |
+| Leakage guard | none | 4 tests, including *shuffling a race's own result and checking its features don't move* |
+| Models | XGBoost, MLP, (broken) Transformer | conditional logit + LightGBM, ensembled; temperature calibration tested |
+| Reproducible | notebooks | `./run_all.sh` |
 
-### Prerequisites
+Deliberate non-goal: sequence models (RNN/Transformer) are **not** included. With ~270 races the data is thin for them, but that is a hypothesis I have *not* tested here (v1's Transformer trained on NaN loss, so it is no evidence either way).
 
-- Python 3.8 or higher
-- Jupyter Notebook or JupyterLab
-- Git
+## What the model uses
 
-### Installation
+![what matters](reports/figures/04_what_matters.png)
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/divyanshg03/F1-Winner-Predictor.git
-   cd F1-Winner-Predictor
-   ```
+Ablation (train 2014–21, test 2022–26): grid and driver form carry the model. Team form is redundant once qualifying is known, and removing it slightly *improves* the logit. I reported this rather than retuning on it.
 
-2. **Create a virtual environment**
-   ```bash
-   python -m venv f1_env
-   source f1_env/bin/activate  # On Windows: f1_env\Scripts\activate
-   ```
+## Honest limitations
 
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+- **No odds benchmark.** Bookmaker odds are the real gold standard and aren't in this data. Beating the grid is a much lower bar.
+- **Small samples.** 188 scored races; the 2024–26 holdout is 63 races and 2026 is 15. Intervals are wide on purpose.
+- **Calibration at the top end runs slightly hot** (82% predicted, 75% observed, n=57), so treat 70%+ calls with care.
+- **Missing signals:** long-run practice pace, tyre strategy, weather, safety-car risk, post-qualifying penalties for future races (qualifying order is used as the grid until it is official).
+- **Selection discipline:** I added one family of features (this weekend's team pace, faster constructor form) after seeing early results, developing on 2018–23 only. It changed nothing (log-loss 1.170 vs 1.169 on dev; 1.321 vs 1.318 on holdout). Both are reported.
+- **2026 is a regulation reset.** Features that lean on car history are discounted at season starts (`RESET_SEASONS`), but 15 races is too few to judge.
 
-4. **Launch Jupyter Notebook**
-   ```bash
-   jupyter notebook
-   ```
+## Run it
 
-5. **Start with the EDA notebook**
-   - Open `notebooks/EDA.ipynb` to begin exploring the data
-
-## 📈 Usage
-
-### Exploratory Data Analysis
-
-Start by running the EDA notebook to understand the dataset:
-
-```python
-# Load and explore the data
-import pandas as pd
-import fastf1
-
-# Load race results
-df = pd.read_csv('notebooks/f1_results_2022_2025.csv')
-print(df.head())
+```bash
+pip install -r requirements.txt
+./run_all.sh            # ingest -> tests -> backtest -> figures -> next-race prediction
 ```
 
-### Model Training (Coming Soon)
+Or step by step:
 
-The project will include various machine learning models:
-- Logistic Regression
-- Random Forest
-- Neural Networks
-- Ensemble Methods
+```bash
+cd src && python -m f1pred.ingest 2014 2026   # cached Jolpica pulls (~15 min first time)
+python -m pytest tests -q
+python scripts/run_backtest.py                # writes reports/backtest_scores.csv, metrics_*.csv
+python scripts/holdout_report.py              # dev (2018-23) vs holdout (2024-26)
+python scripts/make_figures.py
+python scripts/predict_next.py --refresh      # after qualifying, before the race
+```
 
-## 🎯 Model Features
+## Layout
 
-The prediction model considers multiple factors:
+```
+src/f1pred/    ingest.py  features.py  models.py  backtest.py
+scripts/       run_backtest.py  holdout_report.py  make_figures.py  predict_next.py
+tests/         test_leakage.py
+predictions/   frozen pre-race predictions (the audit trail)
+reports/       backtest scores, metrics tables, figures
+articles/      Substack essay + LinkedIn post
+legacy/        v1 notebooks and data (kept on purpose)
+```
 
-- **Driver Performance**: Historical win rates, podium finishes, points per race
-- **Constructor Strength**: Team performance, car reliability, development trends
-- **Circuit Characteristics**: Track-specific performance, weather conditions
-- **Current Season Form**: Recent race performance and momentum
-- **Grid Position**: Qualifying performance and starting position advantage
-- **Historical Patterns**: Seasonal trends and championship standings
+## Data and licence
 
-## 📊 Results
-
-*Results and model performance metrics will be updated as the project develops.*
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **FastF1**: For providing comprehensive F1 data API
-- **Formula 1**: For the exciting sport that inspired this project
-- **FIA**: For maintaining detailed race records and statistics
-
-## 📞 Contact
-
-- **Author**: Divyansh Gupta
-- **GitHub**: [@divyanshg03](https://github.com/divyanshg03)
-- **Project Link**: [https://github.com/divyanshg03/F1-Winner-Predictor](https://github.com/divyanshg03/F1-Winner-Predictor)
-
-## 🔮 Future Enhancements
-
-- [ ] Real-time race prediction during live sessions
-- [ ] Weather data integration
-- [ ] Tire strategy analysis
-- [ ] Driver market value prediction
-- [ ] Web application for interactive predictions
-- [ ] API development for external integrations
-
----
-
-**Note**: This project is for educational and research purposes. Predictions are based on historical data and should not be used for gambling or commercial betting purposes.
+Race data from the [Jolpica](https://github.com/jolpica/jolpica-f1) Ergast-compatible API. Code is MIT-licensed. For education and research; not betting advice.
