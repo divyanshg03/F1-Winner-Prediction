@@ -1,0 +1,27 @@
+practice coverage: 0.892 weather coverage: 0.942
+DEV 2018-23
+     model  races  top1  top3  logloss
+  ens_post    125 0.616 0.904    1.170
+logit_post    125 0.608 0.880    1.181
+logit_prac    125 0.608 0.880    1.245
+  logit_wx    125 0.608 0.888    1.182
+  logit_pw    125 0.592 0.872    1.247
+    gbm_pw    125 0.624 0.904    1.220
+    ens_pw    125 0.600 0.912    1.198
+  logit_prac vs logit_post: -0.064 [-0.123,-0.019]
+  logit_wx vs logit_post: -0.001 [-0.013,+0.011]
+  logit_pw vs logit_post: -0.066 [-0.130,-0.016]
+  ens_pw vs ens_post: -0.028 [-0.057,-0.003]
+HOLDOUT 2024-26
+     model  races  top1  top3  logloss
+  ens_post     63 0.540 0.889    1.321
+logit_post     63 0.540 0.889    1.370
+logit_prac     63 0.540 0.889    1.372
+  logit_wx     63 0.540 0.873    1.359
+  logit_pw     63 0.540 0.873    1.361
+    gbm_pw     63 0.587 0.873    1.328
+    ens_pw     63 0.556 0.889    1.317
+  logit_prac vs logit_post: -0.002 [-0.008,+0.004]
+  logit_wx vs logit_post: +0.011 [-0.008,+0.032]
+  logit_pw vs logit_post: +0.009 [-0.010,+0.030]
+  ens_pw vs ens_post: +0.003 [-0.018,+0.027]
