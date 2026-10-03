@@ -24,6 +24,15 @@ What survives scrutiny:
 
 ![edge](reports/figures/02_edge_over_time.png)
 
+## Try it: interactive demo
+
+```bash
+pip install fastapi uvicorn
+python -m uvicorn app.server:app --port 8000     # then open http://localhost:8000
+```
+
+Pick any of the 268 races (188 with honest walk-forward calls), see the probabilities next to the real winner, view the frozen pre-race call, and edit the starting grid to see what a slot is worth. Grid what-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
+
 ## Forward predictions
 
 `scripts/predict_next.py` trains on every completed race, scores the next one, and freezes a timestamped JSON (with git commit) into [`predictions/`](predictions/) **before the race**. Those files are the audit trail: the repo records the call, then the result.
@@ -49,7 +58,17 @@ The first version (2025, kept in [`legacy/`](legacy/)) reported **95.7% accuracy
 | Models | XGBoost, MLP, (broken) Transformer | conditional logit + LightGBM, ensembled; temperature calibration tested |
 | Reproducible | notebooks | `./run_all.sh` |
 
-Deliberate non-goal: sequence models (RNN/Transformer) are **not** included. With ~270 races the data is thin for them, but that is a hypothesis I have *not* tested here (v1's Transformer trained on NaN loss, so it is no evidence either way).
+### Do sequence models help? (pre-registered check)
+
+v1 claimed a Transformer; its loss was NaN, so it proved nothing. I re-ran the idea properly on the same 188 races: GRU and Transformer encoders over each driver's last 10 races, softmax across the field, early stopping on *training* races only, 3 seeds, protocol fixed in advance ([details](reports/seq_experiment.md)).
+
+| vs the tabular ensemble (nats/race, + = sequence better) | all 188 races | 2024-26 |
+|---|---|---|
+| GRU + qualifying | -0.036 [-0.111, +0.042] | +0.063 [-0.059, +0.193] |
+| GRU + qualifying + form features | -0.041 [-0.101, +0.021] | -0.008 [-0.079, +0.069] |
+| Transformer + qualifying | **-0.104 [-0.174, -0.033]** | -0.088 [-0.217, +0.043] |
+
+The GRUs tie the tabular ensemble; the Transformer is significantly worse. All three beat grid-only, so the history carries real signal, just no more than the hand-built features. Caveat: sequence models were refit every 8 races (compute), the tabular models every race, which slightly favours the tabular side.
 
 ## What the model uses
 
@@ -92,6 +111,7 @@ scripts/       run_backtest.py  holdout_report.py  make_figures.py  predict_next
 tests/         test_leakage.py
 predictions/   frozen pre-race predictions (the audit trail)
 reports/       backtest scores, metrics tables, figures
+app/           FastAPI + single-page demo UI
 articles/      Substack essay + LinkedIn post
 legacy/        v1 notebooks and data (kept on purpose)
 ```
