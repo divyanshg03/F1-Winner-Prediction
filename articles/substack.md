@@ -80,6 +80,6 @@ One race tells you almost nothing about a probabilistic model. A 67% call fails 
 
 A year ago I optimised the number that made me look good. This time I optimised for being hard to fool. The model is modest, the edge is smaller than I hoped, and I trust it far more.
 
-Code, data pipeline, tests and every figure: **[github.com/divyanshg03/F1-Winner-Predictor](https://github.com/divyanshg03/F1-Winner-Predictor)**. One command (`./run_all.sh`) reproduces everything.
+Code, data pipeline, tests and every figure: **[github.com/divyanshg03/F1-Winner-Prediction](https://github.com/divyanshg03/F1-Winner-Prediction)**. One command (`./run_all.sh`) reproduces everything.
 
 *If you work with models: what's the lazy baseline in your project, and have you actually run it?*
