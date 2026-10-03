@@ -49,7 +49,17 @@ The first version (2025, kept in [`legacy/`](legacy/)) reported **95.7% accuracy
 | Models | XGBoost, MLP, (broken) Transformer | conditional logit + LightGBM, ensembled; temperature calibration tested |
 | Reproducible | notebooks | `./run_all.sh` |
 
-Deliberate non-goal: sequence models (RNN/Transformer) are **not** included. With ~270 races the data is thin for them, but that is a hypothesis I have *not* tested here (v1's Transformer trained on NaN loss, so it is no evidence either way).
+### Do sequence models help? (pre-registered check)
+
+v1 claimed a Transformer; its loss was NaN, so it proved nothing. I re-ran the idea properly on the same 188 races: GRU and Transformer encoders over each driver's last 10 races, softmax across the field, early stopping on *training* races only, 3 seeds, protocol fixed in advance ([details](reports/seq_experiment.md)).
+
+| vs the tabular ensemble (nats/race, + = sequence better) | all 188 races | 2024-26 |
+|---|---|---|
+| GRU + qualifying | -0.036 [-0.111, +0.042] | +0.063 [-0.059, +0.193] |
+| GRU + qualifying + form features | -0.041 [-0.101, +0.021] | -0.008 [-0.079, +0.069] |
+| Transformer + qualifying | **-0.104 [-0.174, -0.033]** | -0.088 [-0.217, +0.043] |
+
+The GRUs tie the tabular ensemble; the Transformer is significantly worse. All three beat grid-only, so the history carries real signal, just no more than the hand-built features. Caveat: sequence models were refit every 8 races (compute), the tabular models every race, which slightly favours the tabular side.
 
 ## What the model uses
 
