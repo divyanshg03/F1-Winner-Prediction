@@ -1,0 +1,36 @@
+{
+  "chosen": {
+    "logit_post": {
+      "l2": 10
+    },
+    "gbm_post": {
+      "n_estimators": 150,
+      "num_leaves": 4,
+      "min_child_samples": 40
+    },
+    "nn_post": {
+      "hidden": 32,
+      "wd": 0.001,
+      "epochs": 80,
+      "dropout": 0.2
+    },
+    "logit_pre": {
+      "l2": 3
+    },
+    "gbm_pre": {
+      "n_estimators": 250,
+      "num_leaves": 10,
+      "min_child_samples": 40
+    },
+    "nn_pre": {
+      "hidden": 32,
+      "wd": 0.001,
+      "epochs": 80,
+      "dropout": 0.2
+    }
+  },
+  "temps": {
+    "post": 0.8669347983898805,
+    "pre": 0.905024767696385
+  }
+}
