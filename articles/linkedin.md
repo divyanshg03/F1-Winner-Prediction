@@ -15,7 +15,9 @@ Along the way I found my own bugs: a feature that was always zero, a Transformer
 
 The part I'm proudest of is the leak test. It shuffles a race's own result, rebuilds the features, and asserts nothing changed.
 
-I also froze tomorrow's race prediction in the repo before lights-out, so it can be scored publicly, right or wrong.
+I then threw everything else at it: circuit geometry, tyre proxies, practice pace, weather, a lap-by-lap race simulator. Nothing beat the simple model. Against a betting market (Polymarket, 17 races) it was a statistical tie.
+
+I also froze the next race prediction in the repo before lights-out, so it can be scored publicly, right or wrong.
 
 The lesson: optimise for being hard to fool, not for the number that looks good.
 

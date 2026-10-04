@@ -60,10 +60,28 @@ I didn't go looking for that. A model that "works" can quietly be working only b
 
 Mostly, yes. When the model says 30%, drivers win about 30% of the time. The one soft spot is the top: where it said about 82%, drivers won 75% of the time (57 cases). I'd treat any 70%+ call with some suspicion.
 
+## I threw everything else at it. Nothing helped.
+
+I worked through the checklist every F1 model is supposed to have: circuit geometry (twistiness, straights, altitude, corners), overtaking difficulty, safety-car and DNF history, tyre degradation, practice pace, weather, teammate gaps, championship standing, even a full lap-by-lap race simulator fed by lap data from 188 races.
+
+Same rules as before: walk-forward, metric chosen on the older races, the 2024 to 2026 holdout checked once.
+
+- **Almost everything tied the simple model.** Differences were a few thousandths of a nat, far inside the noise.
+- **Practice pace made it significantly worse** on the development races. Short practice sessions are a noisy signal.
+- **The simulator's pace model was genuinely good**, predicting race pace 35% better than qualifying alone. But the simulator as a whole lost to the simple model. Its pole-sitters won 28% of races against 57% in reality. Random pit-stop timing was scrambling the order far more than real teams allow, because real teams cover each other. That needs a reactive strategy model, which I didn't build.
+
+The reason is simple: the starting grid already contains most of what this weekend's pace tells you, and about 190 races can't teach a model small extra effects.
+
+## And against a betting market?
+
+Prediction-market prices were the one thing I thought could beat me, since they carry information a model can't see. I pulled Polymarket's public price history (no account, no trades) and compared each race's last price before lights-out with my model's call.
+
+On the 17 clean 2025 races: **my model's log-loss was 0.934; the market's was 0.961.** The difference (0.03 nats per race, interval from about -0.19 to +0.14) is a tie. With 17 races I could only have detected a big gap, so the honest reading is "not clearly worse than a market", not "beats the market".
+
 ## What I deliberately left out
 
-- **Anything I couldn't test.** No tyre strategy, no weather, no safety-car model. These matter, and I don't have the data to claim anything about them.
-- **A fair fight with bookmakers.** Betting odds are the real benchmark and I don't have them. Beating the grid is a much lower bar, and I'd rather say that than imply otherwise.
+- **Sharp bookmaker lines.** Polymarket is a thin exchange, not a bookmaker. Historical bookmaker odds weren't freely available.
+- **Compound-level tyre data per car and DRS-zone counts.** I couldn't find clean sources, so the tyre test is a proxy.
 
 ## Did the fancy neural nets help?
 

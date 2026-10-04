@@ -70,6 +70,35 @@ v1 claimed a Transformer; its loss was NaN, so it proved nothing. I re-ran the i
 
 The GRUs tie the tabular ensemble; the Transformer is significantly worse. All three beat grid-only, so the history carries real signal, just no more than the hand-built features. Caveat: sequence models were refit every 8 races (compute), the tabular models every race, which slightly favours the tabular side.
 
+## What didn't help (and why that is a finding)
+
+After the core model, I tried everything a domain checklist suggests. Each test used the same walk-forward protocol, with the metric chosen on dev (2018-23) and the 2024-26 holdout checked once. Full tables: [`reports/feature_search_findings.md`](reports/feature_search_findings.md).
+
+| Idea | Result vs current model |
+|---|---|
+| Race-pace history from 188 races of lap data | tie (-0.005 dev, -0.010 holdout nats/race) |
+| Circuit geometry and history (twistiness, straights, altitude, corners, overtaking, safety-car and DNF rates) | tie (-0.001 dev, +0.001 holdout) |
+| Driver experience, championship standing, teammate gap | tie / slightly worse |
+| Tyre-management proxy | tie dev, slightly worse holdout |
+| Practice pace (FP2/FP1) | **significantly worse on dev** (-0.064), tie on holdout |
+| Race-day weather | tie (and optimistic: it uses actual, not forecast, weather) |
+| Lap-by-lap Monte Carlo race simulator ([details](reports/sim_findings.md)) | ties grid-only, **significantly worse** than the tabular model |
+
+The starting grid already carries most of this weekend's pace information, and about 190 scored races cannot teach the model small extra effects. The simulator's pace model *is* good (race-pace error 35% below qualifying alone), but independent pit-strategy randomness washes out the grid advantage (simulated pole wins 28% vs 57% in reality); fixing it needs reactive strategy modelling.
+
+### Versus a betting market
+
+I pulled Polymarket's race-winner price history (public API, no account) and compared the last pre-lights-out price with the model on the same races ([`reports/odds_findings.md`](reports/odds_findings.md)).
+
+| 17 races, 2025 | log-loss | top-1 |
+|---|---|---|
+| Grid only | 1.075 | 71% |
+| Model | 0.934 | 65% |
+| Market | 0.961 | 53% |
+| 50/50 blend | 0.910 | 65% |
+
+Model vs market: -0.027 nats/race [-0.19, +0.14], a **tie**. The 17-race sample can only detect a large gap, so read this as "not clearly worse than a market", not "beats the market".
+
 ## What the model uses
 
 ![what matters](reports/figures/04_what_matters.png)
@@ -78,10 +107,10 @@ Ablation (train 2014–21, test 2022–26): grid and driver form carry the model
 
 ## Honest limitations
 
-- **No odds benchmark.** Bookmaker odds are the real gold standard and aren't in this data. Beating the grid is a much lower bar.
+- **Thin odds benchmark.** I compared against Polymarket prices on 17 races (2025 only). Sharp bookmaker lines and longer history were not available, so "ties the market" is weakly supported.
 - **Small samples.** 188 scored races; the 2024–26 holdout is 63 races and 2026 is 15. Intervals are wide on purpose.
 - **Calibration at the top end runs slightly hot** (82% predicted, 75% observed, n=57), so treat 70%+ calls with care.
-- **Missing signals:** long-run practice pace, tyre strategy, weather, safety-car risk, post-qualifying penalties for future races (qualifying order is used as the grid until it is official).
+- **Tested and found not to help:** practice pace, weather, tyre proxies, circuit geometry, race-pace history, a race simulator (see above). **Not available:** compound-level tyre data per car, DRS-zone counts, post-qualifying penalties for future races (qualifying order is used as the grid until it is official).
 - **Selection discipline:** I added one family of features (this weekend's team pace, faster constructor form) after seeing early results, developing on 2018–23 only. It changed nothing (log-loss 1.170 vs 1.169 on dev; 1.321 vs 1.318 on holdout). Both are reported.
 - **2026 is a regulation reset.** Features that lean on car history are discounted at season starts (`RESET_SEASONS`), but 15 races is too few to judge.
 
@@ -112,6 +141,7 @@ tests/         test_leakage.py
 predictions/   frozen pre-race predictions (the audit trail)
 reports/       backtest scores, metrics tables, figures
 app/           FastAPI + single-page demo UI
+reports/       ... plus feature_search_findings.md, sim_findings.md, odds_findings.md, seq_experiment.md
 articles/      Substack essay + LinkedIn post
 legacy/        v1 notebooks and data (kept on purpose)
 ```

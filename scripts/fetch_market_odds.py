@@ -3,7 +3,7 @@
 Run this from a network that can reach polymarket.com (it is blocked on some ISPs):
     python scripts/fetch_market_odds.py
 Writes data/raw/odds/polymarket_f1.csv with columns:
-    event, market, outcome, token_id, end_date, ts_utc, price      (price = implied win probability, 0-1)
+    event, market, outcome, token_id, end_date, ts_utc, price, resolved_prices      (price = implied win probability, 0-1)
 and prints a discovery summary. NOTE: written from the documented API shape and not yet run against the
 live service; if a field name differs, the summary printout will show it. Send that output back.
 """
@@ -19,6 +19,12 @@ OUT = Path(__file__).resolve().parents[1] / "data" / "raw" / "odds"
 OUT.mkdir(parents=True, exist_ok=True)
 GAMMA, CLOB = "https://gamma-api.polymarket.com", "https://clob.polymarket.com"
 PAT = re.compile(r"grand prix|formula 1|\bf1\b", re.I)
+SKIP = re.compile(r"pole|qualif|sprint|podium|fastest|constructor|championship|safety|dnf|lap|points|teammate|head", re.I)
+
+
+def ts(s):
+    import datetime as dt
+    return int(dt.datetime.fromisoformat(s.replace("Z", "+00:00")).timestamp())
 
 
 def get(url, **params):
@@ -39,7 +45,8 @@ def find_events():
             except Exception as e:  # noqa: BLE001
                 print("search failed", q, status, repr(e)[:80]); continue
             for e in d.get("events", []):
-                if PAT.search(e.get("title", "")) and re.search(r"win", e.get("title", ""), re.I):
+                t = e.get("title", "")
+                if PAT.search(t) and re.search(r"winner", t, re.I) and not SKIP.search(t):
                     seen[e["id"]] = e
     return list(seen.values())
 
@@ -58,14 +65,14 @@ def main():
                 continue
             name = m.get("groupItemTitle") or m.get("question")
             try:
-                hist = get(f"{CLOB}/prices-history", market=tokens[0], interval="max", fidelity=60).get("history", [])
+                hist = get(f"{CLOB}/prices-history", market=tokens[0], startTs=ts(m["startDate"]), endTs=ts(m["endDate"]), fidelity=60).get("history", [])
             except Exception as ex:  # noqa: BLE001
                 print("  no history:", e.get("title"), name, repr(ex)[:60]); continue
             for h in hist:
-                rows.append([e.get("title"), m.get("question"), name, tokens[0], str(e.get("endDate"))[:10], h["t"], h["p"]])
+                rows.append([e.get("title"), m.get("question"), name, tokens[0], str(e.get("endDate"))[:10], h["t"], h["p"], m.get("outcomePrices")])
         print(f"  {e.get('title')} | end {str(e.get('endDate'))[:10]} | markets {len(e.get('markets', []))}")
     with open(OUT / "polymarket_f1.csv", "w", newline="", encoding="utf8") as f:
-        w = csv.writer(f); w.writerow(["event", "market", "outcome", "token_id", "end_date", "ts_utc", "price"]); w.writerows(rows)
+        w = csv.writer(f); w.writerow(["event", "market", "outcome", "token_id", "end_date", "ts_utc", "price", "resolved_prices"]); w.writerows(rows)
     print(f"wrote {len(rows)} price points -> {OUT / 'polymarket_f1.csv'}")
 
 
