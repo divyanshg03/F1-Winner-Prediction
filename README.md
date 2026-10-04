@@ -37,7 +37,7 @@ What survives scrutiny:
 ```bash
 git clone https://github.com/divyanshg03/F1-Winner-Prediction.git
 cd F1-Winner-Prediction
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scriptsctivate
+python -m venv .venv && source .venv/bin/activate      # Windows: .venv/Scripts/activate
 pip install -r requirements.txt                          # includes fastapi + uvicorn; CPU torch is enough
 python -m uvicorn app.server:app --port 8000             # run from the repo root
 # open http://localhost:8000
