@@ -68,15 +68,25 @@ def race(key: str):
     if r.empty:
         raise HTTPException(404, "unknown race")
     bt = BT[BT.race_key == key]
-    if len(bt):  # honest out-of-sample call, made with only earlier races
+    fz = FROZEN.get(key)
+    if fz:  # the pre-race call that was timestamped and committed before the race
+        fp = {x["driver"]: x["p_win"] for x in fz["probabilities"]}
+        probs = {x.driver_id: fp.get(x.driver, 0.0) for x in r.itertuples()}
+        tot = sum(probs.values()) or 1.0
+        probs = {k: v / tot for k, v in probs.items()}
+        source = f"frozen pre-race prediction ({fz['generated_utc'][:16]} UTC, before the race)"
+    elif len(bt):  # honest out-of-sample call, made with only earlier races
         p = race_softmax(bt.s_ens_post.to_numpy(float), np.zeros(len(bt), dtype=int))
         probs = dict(zip(bt.driver_id, p))
         source = "walk-forward backtest (trained only on earlier races)"
     else:
         probs = dict(zip(r.driver_id, live_probs(r)))
-        source = "live model (trained on all completed races)"
+        done = r.won.notna().any()
+        source = ("model trained on all completed races, INCLUDING this one, so not a fair test" if done
+                  else "live model (trained on all completed races)")
     drivers = [dict(id=x.driver_id, name=x.driver, team=x.constructor, grid=int(x.grid), p=float(probs.get(x.driver_id, 0)),
-                    won=bool(x.won == 1)) for x in r.itertuples()]
+                    won=bool(x.won == 1), finish=None if pd.isna(x.pos) else int(x.pos),
+                    status=None if pd.isna(x.pos) else str(x.status)) for x in r.itertuples()]
     drivers.sort(key=lambda d: -d["p"])
     return dict(key=key, name=r.race_name.iloc[0], date=str(r.date.iloc[0].date()), source=source,
                 winner=_winner(key), drivers=drivers, frozen=FROZEN.get(key))

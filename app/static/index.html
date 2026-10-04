@@ -2,50 +2,76 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>F1 Winner Predictor</title>
 <style>
-:root{--bg:#fcfcfb;--card:#fff;--ink:#0b0b0b;--ink2:#52514e;--line:#e4e3df;--blue:#2a78d6;--orange:#eb6834;--green:#1baf7a}
-@media(prefers-color-scheme:dark){:root{--bg:#1a1a19;--card:#232321;--ink:#fff;--ink2:#c3c2b7;--line:#3a3a37;--blue:#3987e5;--orange:#d95926;--green:#199e70}}
+:root{--bg:#fcfcfb;--card:#fff;--ink:#0b0b0b;--ink2:#52514e;--line:#e4e3df;--blue:#2a78d6;--green:#1a8f66;--red:#d4452f;--amber:#b7791f;--win:#e8f6ef}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a19;--card:#232321;--ink:#fff;--ink2:#c3c2b7;--line:#3a3a37;--blue:#3987e5;--green:#2fbf8f;--red:#ef6a52;--amber:#e0a847;--win:#1d3a2f}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,Segoe UI,sans-serif}
-main{max-width:980px;margin:0 auto;padding:20px 16px 60px}h1{font-size:26px;margin:8px 0 2px}.sub{color:var(--ink2);margin:0 0 18px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
-.stat b{font-size:22px;display:block}.stat span{color:var(--ink2);font-size:13px}
+main{max-width:1020px;margin:0 auto;padding:20px 16px 60px}h1{font-size:26px;margin:8px 0 2px}.sub{color:var(--ink2);margin:0 0 18px}
+h2{font-size:18px;margin:0 0 4px}.note{color:var(--ink2);font-size:13px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px}.stat b{font-size:22px;display:block}.stat span{color:var(--ink2);font-size:13px}
 select{font:inherit;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:100%}
-.row{display:grid;grid-template-columns:150px 1fr 54px 64px;gap:8px;align-items:center;padding:4px 0}
-.name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.team{color:var(--ink2);font-size:12px}
-.bar{height:16px;background:var(--line);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--blue);border-radius:4px}
-.win i{background:var(--green)}.pct{text-align:right;font-variant-numeric:tabular-nums}
-input[type=number]{width:60px;padding:4px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
-button{font:inherit;padding:8px 14px;border-radius:8px;border:0;background:var(--blue);color:#fff;cursor:pointer;margin-right:6px}
-button.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
-.badge{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--line);font-size:12px;margin-left:6px}
-.note{color:var(--ink2);font-size:13px;margin:8px 0}h2{font-size:18px;margin:0 0 8px}
-@media(max-width:600px){.row{grid-template-columns:110px 1fr 46px 56px}}
+.bar2{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0 10px}.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;padding:5px 12px;border:0;background:var(--card);color:var(--ink);cursor:pointer}.seg button.on{background:var(--blue);color:#fff}
+.summary{padding:10px 12px;border-radius:8px;background:var(--win);margin:8px 0 12px;font-size:14px}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}.tbl th{font-weight:600;color:var(--ink2);font-size:12px;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:middle}.tbl tr.won td{background:var(--win)}
+.num{text-align:center;font-variant-numeric:tabular-nums;white-space:nowrap}.team{display:flex;align-items:center;gap:8px}.chip{width:5px;height:30px;border-radius:3px;flex:none}
+.dn{font-weight:600}.tn{color:var(--ink2);font-size:12px}
+.pos{display:inline-block;min-width:34px;padding:2px 6px;border-radius:6px;background:var(--line);font-weight:600}
+.pos.p1{background:var(--green);color:#fff}.pos.dnf{background:var(--red);color:#fff}
+.up{color:var(--green);font-weight:600}.dn2{color:var(--red);font-weight:600}.eq{color:var(--ink2)}
+.prob{display:flex;align-items:center;gap:8px;min-width:170px}.pb{flex:1;height:12px;background:var(--line);border-radius:4px;overflow:hidden}.pb i{display:block;height:100%;background:var(--blue)}
+.pp{width:46px;text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--line);font-size:12px;margin-left:6px}.badge.w{background:var(--green);color:#fff}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:4px 16px;margin:4px 0 10px}
+input[type=number]{width:62px;padding:4px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button.go{font:inherit;padding:8px 14px;border-radius:8px;border:0;background:var(--blue);color:#fff;cursor:pointer;margin-right:6px}button.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.scroll{overflow-x:auto}
 </style></head><body><main>
 <h1>F1 Winner Predictor</h1>
-<p class="sub">Calibrated win probabilities, tested race by race with no peeking at the future.</p>
+<p class="sub">Calibrated win probabilities, tested race by race without peeking at the future.</p>
 <div class="stats" id="stats"></div>
-<div class="card" style="margin-bottom:14px"><label for="race" class="note">Pick a race</label><select id="race"></select></div>
+<div class="card"><label for="race" class="note">Pick a race</label><select id="race"></select></div>
 <div id="frozen"></div>
-<div class="card"><h2 id="title"></h2><div class="note" id="src"></div><div id="rows"></div></div>
-<div class="card" style="margin-top:14px"><h2>What if the grid were different?</h2>
-<p class="note">Edit starting positions (each slot used once), then re-predict. Swap two drivers to see how much a grid slot is worth.</p>
-<div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px"></div>
-<p><button id="go">Re-predict</button><button class="alt" id="reset">Reset</button></p><div id="wi"></div></div>
+<div class="card">
+ <h2 id="title"></h2><div class="note" id="src"></div><div class="summary" id="summary"></div>
+ <div class="legend note"><div><b>Start</b> = grid position after qualifying (and penalties).</div><div><b>Finish</b> = final classified position (DNF = did not finish).</div><div><b>Change</b> = places gained (+) or lost (&minus;) from start to finish.</div><div><b>Model win chance</b> = probability given before the race.</div></div>
+ <div class="bar2"><span class="note">Sort by:</span><span class="seg" id="sort"><button data-s="p" class="on">Model win chance</button><button data-s="finish">Finish</button><button data-s="grid">Start</button></span></div>
+ <div class="scroll"><table class="tbl"><thead><tr><th class="num">Model rank</th><th>Driver</th><th class="num">Start</th><th class="num">Finish</th><th class="num">Change</th><th>Model win chance</th></tr></thead><tbody id="rows"></tbody></table></div>
+</div>
+<div class="card"><h2>What if the grid were different?</h2>
+ <p class="note">Edit starting positions (each slot used once), then re-predict. Swap two drivers to see how much a grid slot is worth.</p>
+ <div id="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px"></div>
+ <p><button class="go" id="go">Re-predict</button><button class="go alt" id="reset">Reset</button></p><div id="wi"></div></div>
 </main>
 <script>
-const $=s=>document.querySelector(s),pc=p=>(p*100).toFixed(p<.1?1:0)+'%';let cur=null;
+const $=s=>document.querySelector(s),pc=p=>(p*100).toFixed(p<.1?1:0)+'%';let cur=null,sortBy='p';
+const TEAMS=[['mercedes','#27c5ad'],['red bull','#3671c6'],['ferrari','#e8002d'],['mclaren','#ff8000'],['aston','#229971'],['alpine','#ff87bc'],['williams','#64c4ff'],['rb f1','#6692ff'],['racing bulls','#6692ff'],['alphatauri','#5e8faa'],['toro','#469bff'],['haas','#9aa0a6'],['sauber','#52e252'],['alfa','#b12039'],['audi','#c33b3b'],['cadillac','#8a8d91'],['renault','#ffd800'],['racing point','#f596c8'],['force india','#f596c8']];
+const col=t=>{t=(t||'').toLowerCase();for(const[k,c]of TEAMS)if(t.includes(k))return c;return '#8a8d91'};
 async function j(u,o){const r=await fetch(u,o);if(!r.ok)throw new Error((await r.json()).detail||r.status);return r.json()}
-function rows(ds,el,show){el.innerHTML=ds.slice(0,show).map(d=>`<div class="row ${d.won?'win':''}"><div class="name">${d.name}<div class="team">${d.team||''} · P${d.grid}</div></div><div class="bar"><i style="width:${Math.min(100,d.p*100/(ds[0].p||1))}%"></i></div><div class="pct">${pc(d.p)}</div><div class="team">${d.won?'WON':''}</div></div>`).join('')}
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function finishCell(d){if(d.finish==null)return '<span class="eq">&ndash;</span>';
+ const dnf=d.status&&!(d.status==='Finished'||d.status==='Lapped'||d.status.startsWith('+'));
+ return `<span class="pos ${d.finish===1?'p1':''} ${dnf?'dnf':''}">${dnf?'DNF':'P'+d.finish}</span>`+(dnf?`<div class="tn">${esc(d.status)} (P${d.finish})</div>`:'')}
+function change(d){if(d.finish==null)return '<span class="eq">&ndash;</span>';const c=d.grid-d.finish;return c>0?`<span class="up">+${c}</span>`:c<0?`<span class="dn2">&minus;${-c}</span>`:'<span class="eq">=</span>'}
+function render(){const r=cur,rank=[...r.drivers].sort((a,b)=>b.p-a.p),mr=new Map(rank.map((d,i)=>[d.id,i+1]));let ds=[...r.drivers];
+ if(sortBy==='p')ds=rank;else if(sortBy==='finish')ds.sort((a,b)=>(a.finish??99)-(b.finish??99));else ds.sort((a,b)=>a.grid-b.grid);
+ const mx=rank[0].p||1;
+ $('#rows').innerHTML=ds.map(d=>`<tr class="${d.won?'won':''}"><td class="num">${mr.get(d.id)}</td><td><div class="team"><span class="chip" style="background:${col(d.team)}"></span><div><div class="dn">${esc(d.name)}${d.won?'<span class="badge w">WON</span>':''}</div><div class="tn">${esc(d.team)}</div></div></div></td><td class="num"><span class="pos ${d.grid===1?'p1':''}">P${d.grid}</span></td><td class="num">${finishCell(d)}</td><td class="num">${change(d)}</td><td><div class="prob"><div class="pb"><i style="width:${d.p/mx*100}%"></i></div><div class="pp">${pc(d.p)}</div></div></td></tr>`).join('')}
 async function load(k){const r=await j('/api/race/'+k);cur=r;
- $('#title').innerHTML=r.name+' '+r.date.slice(0,4)+(r.winner?`<span class="badge">winner: ${r.winner}</span>`:'<span class="badge">upcoming</span>');
- $('#src').textContent='Source: '+r.source;rows(r.drivers,$('#rows'),12);
- $('#frozen').innerHTML=r.frozen?`<div class="card" style="margin-bottom:14px;border-color:var(--orange)"><b>Frozen before the race</b> <span class="note">${r.frozen.generated_utc.slice(0,16)} UTC, commit ${r.frozen.git_commit}</span>${r.frozen.result?`<div>Result: ${r.frozen.result.winner} had ${pc(r.frozen.result.p_assigned||0)}</div>`:'<div class="note">Awaiting the race result.</div>'}</div>`:'';
- const g=[...r.drivers].sort((a,b)=>a.grid-b.grid);$('#grid').innerHTML=g.map(d=>`<label>${d.name.split(' ').pop()} <input type="number" min="1" max="22" data-id="${d.id}" value="${d.grid}" data-orig="${d.grid}"></label>`).join('');$('#wi').innerHTML=''}
+ $('#title').innerHTML=esc(r.name)+' '+r.date.slice(0,4)+(r.winner?`<span class="badge">winner: ${esc(r.winner)}</span>`:'<span class="badge">upcoming</span>');
+ $('#src').textContent='Source: '+r.source;
+ const top=[...r.drivers].sort((a,b)=>b.p-a.p)[0],pole=r.drivers.find(d=>d.grid===1),w=r.drivers.find(d=>d.won);
+ $('#summary').innerHTML=w?`Pole: <b>${esc(pole.name)}</b> (finished ${pole.finish==null?'&ndash;':'P'+pole.finish}) &middot; Winner: <b>${esc(w.name)}</b> (started P${w.grid}) &middot; Model's top pick: <b>${esc(top.name)}</b> at ${pc(top.p)} &mdash; ${top.won?'<b style="color:var(--green)">correct</b>':'wrong'}; it gave the winner ${pc(w.p)}.`:`Pole: <b>${esc(pole.name)}</b> &middot; Model's top pick: <b>${esc(top.name)}</b> at ${pc(top.p)}. Race not run yet.`;
+ $('#frozen').innerHTML=r.frozen?`<div class="card" style="border-color:var(--amber)"><b>Frozen before the race</b> <span class="note">${r.frozen.generated_utc.slice(0,16)} UTC, commit ${r.frozen.git_commit}</span>${r.frozen.result?`<div>Result: <b>${esc(r.frozen.result.winner)}</b> won; the frozen call gave them ${pc(r.frozen.result.p_assigned||0)} (log-loss ${r.frozen.result.log_loss}).</div>`:'<div class="note">Awaiting the race result.</div>'}</div>`:'';
+ render();
+ const g=[...r.drivers].sort((a,b)=>a.grid-b.grid);$('#grid').innerHTML=g.map(d=>`<label>${esc(d.name.split(' ').pop())} <input type="number" min="1" max="22" data-id="${d.id}" value="${d.grid}" data-orig="${d.grid}"></label>`).join('');$('#wi').innerHTML=''}
+$('#sort').onclick=e=>{const b=e.target.closest('button');if(!b)return;sortBy=b.dataset.s;document.querySelectorAll('#sort button').forEach(x=>x.classList.toggle('on',x===b));render()};
 $('#go').onclick=async()=>{const grid={};document.querySelectorAll('#grid input').forEach(i=>grid[i.dataset.id]=+i.value);
  try{const w=await j('/api/race/'+cur.key+'/whatif',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({grid})});
- rows(w.drivers.map(d=>({...d,team:''})),$('#wi'),8);$('#wi').insertAdjacentHTML('beforeend',`<div class="note">${w.note}</div>`)}catch(e){$('#wi').innerHTML='<div class="note" style="color:var(--orange)">'+e.message+'</div>'}};
+ const before=new Map(cur.drivers.map(d=>[d.id,d.p])),orig=new Map(cur.drivers.map(d=>[d.id,d.grid]));
+ $('#wi').innerHTML=`<div class="scroll"><table class="tbl"><thead><tr><th>Driver</th><th class="num">Original start</th><th class="num">New start</th><th class="num">Win chance before</th><th class="num">Win chance after</th><th class="num">Change</th></tr></thead><tbody>${w.drivers.slice(0,10).map(d=>{const b=before.get(d.id)||0,x=(d.p-b)*100;return `<tr><td><b>${esc(d.name)}</b></td><td class="num">P${orig.get(d.id)}</td><td class="num">P${d.grid}</td><td class="num">${pc(b)}</td><td class="num"><b>${pc(d.p)}</b></td><td class="num ${x>0.05?'up':x<-0.05?'dn2':'eq'}">${x>0?'+':''}${x.toFixed(1)} pts</td></tr>`}).join('')}</tbody></table></div><div class="note">${esc(w.note)}</div>`}catch(e){$('#wi').innerHTML='<div class="note" style="color:var(--red)">'+esc(e.message)+'</div>'}};
 $('#reset').onclick=()=>{document.querySelectorAll('#grid input').forEach(i=>i.value=i.dataset.orig);$('#wi').innerHTML=''};
-(async()=>{const s=await j('/api/summary');const c=(t,v,x)=>`<div class="card stat"><b>${v}</b><span>${t}</span></div>`;
+(async()=>{const s=await j('/api/summary');const c=(t,v)=>`<div class="card stat" style="margin:0"><b>${v}</b><span>${t}</span></div>`;
  $('#stats').innerHTML=c('races backtested',s.races)+c('top-pick accuracy, grid only',Math.round(s.grid_only.top1*100)+'%')+c('top-pick accuracy, full model',Math.round(s.full_model.top1*100)+'%')+c('winner log-loss (grid → full)',s.grid_only.logloss+' → '+s.full_model.logloss);
  const rs=await j('/api/races');$('#race').innerHTML=rs.map(r=>`<option value="${r.key}">${r.season} ${r.name}${r.winner?'':' (upcoming)'}${r.frozen?' ★':''}</option>`).join('');
  $('#race').onchange=e=>load(e.target.value);load(rs[0].key)})();

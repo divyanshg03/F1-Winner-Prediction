@@ -35,11 +35,21 @@ What survives scrutiny:
 ## Try it: interactive demo
 
 ```bash
-pip install fastapi uvicorn
-python -m uvicorn app.server:app --port 8000     # then open http://localhost:8000
+git clone https://github.com/divyanshg03/F1-Winner-Prediction.git
+cd F1-Winner-Prediction
+python -m venv .venv && source .venv/bin/activate      # Windows: .venv/Scripts/activate
+pip install -r requirements.txt                          # includes fastapi + uvicorn; CPU torch is enough
+python -m uvicorn app.server:app --port 8000             # run from the repo root
+# open http://localhost:8000
 ```
 
-Pick any of the 268 races (188 with honest walk-forward calls), see the probabilities next to the real winner, view the frozen pre-race call, and edit the starting grid to see what a slot is worth. Grid what-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
+![demo](docs/demo_ui.png)
+
+The first start takes about a minute (it builds the features and trains the models on the committed data in `data/processed/`; no download needed). Then:
+
+- pick any of the 268 races. Each driver shows **Start** (grid slot), **Finish** (final classified position, with DNF and the retirement reason), **Change** (places gained or lost) and the model's pre-race win chance, with the winner highlighted. Sort by model rank, finish or start. The 188 backtested races show the honest walk-forward call, made with only earlier races;
+- races marked with a star have a **frozen pre-race prediction** with its timestamp, commit and (once the race has run) the scored result;
+- **grid what-if**: edit starting positions (each slot once) and re-predict to see what a grid slot is worth. What-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
 
 ## Forward predictions
 
