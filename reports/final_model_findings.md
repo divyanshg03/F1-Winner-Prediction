@@ -23,7 +23,7 @@ ens_post 1.270 [0.920, 1.651] vs grid-only 1.416 (paired +0.146 [-0.325, +0.908]
 - **After qualifying, the model gives well-calibrated probabilities that beat the grid on log-loss in an unseen year** (+0.166, CI excludes zero). Its top-1 accuracy (62%) is *not* better than "pole wins" (67% in 2025): the gain is in probability quality, not in naming the winner.
 - **Before qualifying, the model is poor on unseen years** (21% top-1 in 2025, 7% in 2026): form alone mis-ranks a field whose pecking order changed (2025: McLaren; 2026: new regulations). Use the post-qualifying model for race-week predictions.
 - LightGBM was the best single model; the hand-written neural net tied the logit. Ensembling was close to the best single model, not better.
-- Calibration (2025, ens_post): predicted 26% -> won 28%; 41% -> 38%; 59% -> 77% (n=13); bins under 10% (n=421) saw 0 wins vs ~12 expected-ish at the low end (slightly over-confident on long shots). Bins above 35% are small (n=24).
+- Calibration (2025, ens_post): predicted 26% -> won 28%; 41% -> 38%; 59% -> 77% (n=13); bins under 10% (n=421) saw 0 wins vs about 3.6 expected (fine: that is a plausible outcome at this sample size). Bins above 35% are small (n=24).
 - 24 races means intervals of roughly +/-0.2 nats; modest differences are not detectable.
 
 Reproduce: `python scripts/train_final.py` (model saved to `models/final_2016_2024.joblib`).
