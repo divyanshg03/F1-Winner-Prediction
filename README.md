@@ -43,9 +43,11 @@ python -m uvicorn app.server:app --port 8000             # run from the repo roo
 # open http://localhost:8000
 ```
 
+![demo](docs/demo_ui.png)
+
 The first start takes about a minute (it builds the features and trains the models on the committed data in `data/processed/`; no download needed). Then:
 
-- pick any of the 268 races: the model's win probabilities sit next to the real winner (the 188 backtested races show the honest walk-forward call, made with only earlier races);
+- pick any of the 268 races. Each driver shows **Start** (grid slot), **Finish** (final classified position, with DNF and the retirement reason), **Change** (places gained or lost) and the model's pre-race win chance, with the winner highlighted. Sort by model rank, finish or start. The 188 backtested races show the honest walk-forward call, made with only earlier races;
 - races marked with a star have a **frozen pre-race prediction** with its timestamp, commit and (once the race has run) the scored result;
 - **grid what-if**: edit starting positions (each slot once) and re-predict to see what a grid slot is worth. What-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
 
