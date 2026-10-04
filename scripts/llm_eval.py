@@ -12,7 +12,7 @@ from f1pred import backtest as B, features as F
 
 df = F.make().sort_values(["date", "round", "driver_id"]).reset_index(drop=True)
 lab = df[df.won.notna()]
-COLS = ["race_key", "race_name", "driver", "constructor", "grid", "drv_perf_s", "con_perf_s", "drv_win", "qual_gap", "won"]
+COLS = ["race_key", "race_name", "driver", "driver_id", "constructor", "grid", "drv_perf_s", "con_perf_s", "drv_win", "qual_gap", "won"]
 
 def table(d):
     d = d.sort_values("grid")
