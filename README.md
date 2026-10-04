@@ -51,6 +51,10 @@ The first start takes about a minute (it builds the features and trains the mode
 - races marked with a star have a **frozen pre-race prediction** with its timestamp, commit and (once the race has run) the scored result;
 - **grid what-if**: edit starting positions (each slot once) and re-predict to see what a grid slot is worth. What-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
 
+## Deploy (Hugging Face Spaces)
+
+A `Dockerfile` serves the demo on port 7860 (CPU-only PyTorch, about 1.8 GB image; tested locally). To publish it as a Space: `hf auth login`, then `scripts/push_to_hf_space.sh divyanshg03/f1-winner-predictor`. Any container host works with the same image.
+
 ## Forward predictions
 
 `scripts/predict_next.py` trains on every completed race, scores the next one, and freezes a timestamped JSON (with git commit) into [`predictions/`](predictions/) **before the race**. Those files are the audit trail: the repo records the call, then the result.
