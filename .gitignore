@@ -6,3 +6,4 @@ __pycache__/
 data/raw/
 data/ingest.log
 fastf1_cache/
+catboost_info/

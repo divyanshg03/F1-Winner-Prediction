@@ -140,5 +140,13 @@
       "grid": 21,
       "p_win": 0.0002
     }
-  ]
+  ],
+  "result": {
+    "winner": "Max Verstappen",
+    "p_assigned": 0.6726,
+    "model_rank_of_winner": 1,
+    "log_loss": 0.397,
+    "top_pick": "Max Verstappen",
+    "top_pick_won": true
+  }
 }

@@ -32,6 +32,10 @@ class Params:
     pace_sigma_mult: float = 1.0  # scales the pace-model residual spread
     sc_pit_prob: float = 0.55  # chance an eligible car dives into the pits under SC
     pit_loss_sd: float = 1.2
+    p_under: float = 0.0  # reactive: chance a car stuck close behind another pits early to undercut
+    p_cover: float = 0.0  # reactive: chance a car covers when the car right behind it just pitted
+    shared_shift: bool = False  # pit windows move together across the field (shared race-level timing shift)
+    indiv_jitter: int = 2  # per-car pit-lap jitter (laps)
     strategy_share: float = 0.0  # prob. a car copies the race's main strategy (0 = fully independent, v1 behaviour)
     s: int = 2000
 
@@ -90,9 +94,14 @@ def simulate(setup: RaceSetup, prm: Params, seed: int = 0) -> dict:
         if not fr or not m.any():
             continue
         laps = np.round(np.array(fr[:K]) * L).astype(int)
-        jitter = rng.integers(-2, 3, (S, D, len(laps)))
+        jitter = rng.integers(-prm.indiv_jitter, prm.indiv_jitter + 1, (S, D, len(laps)))
         plan[..., : len(laps)] = np.where(m[..., None], np.clip(laps[None, None, :] + jitter, 2, L - 2), plan[..., : len(laps)])
+    if prm.shared_shift:
+        shift = rng.integers(-3, 4, (S, 1, 1))
+        plan = np.where(plan < 10**9, np.clip(plan + shift, 2, L - 2), plan)
     plan.sort(axis=2)
+    n_plan = (plan < 10**9).sum(axis=2)
+    pit_prev = np.zeros((S, D), dtype=bool)
     stops_done = np.zeros((S, D), dtype=int)
 
     # safety-car events (shared by all cars in a sim)
@@ -129,13 +138,32 @@ def simulate(setup: RaceSetup, prm: Params, seed: int = 0) -> dict:
         lt = np.where(in_sc[:, None], base * SC_LAP_FACTOR, lt)
 
         # pit stops: planned, or opportunistic under the safety car
+        reactive = np.zeros((S, D), dtype=bool)
+        if prm.p_under > 0 or prm.p_cover > 0:
+            o0 = np.argsort(t, axis=1)
+            ts0 = np.take_along_axis(t, o0, 1)
+            gap_s = np.concatenate([np.full((S, 1), np.inf), np.diff(ts0, axis=1)], axis=1)
+            ahead_s = np.concatenate([np.full((S, 1), -1), o0[:, :-1]], axis=1)
+            behind_s = np.concatenate([o0[:, 1:], np.full((S, 1), -1)], axis=1)
+            gap_behind_s = np.concatenate([gap_s[:, 1:], np.full((S, 1), np.inf)], axis=1)
+            gap_ahead, gap_behind = np.empty_like(t), np.empty_like(t)
+            ahead, behind = np.empty((S, D), dtype=int), np.empty((S, D), dtype=int)
+            for arr, src in ((gap_ahead, gap_s), (gap_behind, gap_behind_s), (ahead, ahead_s), (behind, behind_s)):
+                np.put_along_axis(arr, o0, src, 1)
+            elig = alive & (age >= 8) & (stops_done < n_plan) & (lap > 4) & (lap < L - 6) & ~in_sc[:, None]
+            a_i, b_i = np.clip(ahead, 0, D - 1), np.clip(behind, 0, D - 1)
+            ahead_ok = (ahead >= 0) & np.take_along_axis(alive, a_i, 1)
+            under = elig & ahead_ok & (gap_ahead < 2.0) & (np.take_along_axis(stops_done, a_i, 1) <= stops_done)                 & (rng.random((S, D)) < prm.p_under)
+            cover = elig & (behind >= 0) & np.take_along_axis(pit_prev, b_i, 1) & (gap_behind < 3.0)                 & (rng.random((S, D)) < prm.p_cover)
+            reactive = under | cover
         planned = (plan[np.arange(S)[:, None], np.arange(D)[None, :], np.minimum(stops_done, K - 1)] == lap) & (stops_done < K)
         opportunistic = sc_first[:, None] & (age >= 6) & (stops_done < K) & (rng.random((S, D)) < prm.sc_pit_prob)
-        pit = (planned | opportunistic) & alive
+        pit = (planned | opportunistic | reactive) & alive
         loss = setup.pit_loss * np.where(in_sc[:, None], 0.45, 1.0) + rng.normal(0, prm.pit_loss_sd, (S, D))
         lt = lt + np.where(pit, loss, 0.0)
         stops_done = stops_done + pit
         age = np.where(pit, 0.0, age + 1.0)
+        pit_prev = pit
 
         t_new = np.where(alive, t + lt, np.inf)
 
