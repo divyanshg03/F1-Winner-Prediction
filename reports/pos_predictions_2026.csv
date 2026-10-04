@@ -1,0 +1,331 @@
+race_key,race_name,driver,constructor,grid,pos,pred_rank_ens
+2026-01,Australian Grand Prix,Alexander Albon,Williams,15,12,255
+2026-01,Australian Grand Prix,Fernando Alonso,Aston Martin,17,18,247
+2026-01,Australian Grand Prix,Andrea Kimi Antonelli,Mercedes,2,2,52
+2026-01,Australian Grand Prix,Arvid Lindblad,RB F1 Team,9,8,136
+2026-01,Australian Grand Prix,Oliver Bearman,Haas F1 Team,12,7,183
+2026-01,Australian Grand Prix,Gabriel Bortoleto,Audi,10,9,170
+2026-01,Australian Grand Prix,Valtteri Bottas,Cadillac F1 Team,19,19,283
+2026-01,Australian Grand Prix,Franco Colapinto,Alpine F1 Team,16,14,316
+2026-01,Australian Grand Prix,Pierre Gasly,Alpine F1 Team,14,10,297
+2026-01,Australian Grand Prix,Isack Hadjar,Red Bull,3,20,78
+2026-01,Australian Grand Prix,Lewis Hamilton,Ferrari,7,4,95
+2026-01,Australian Grand Prix,Nico Hülkenberg,Audi,11,22,152
+2026-01,Australian Grand Prix,Liam Lawson,RB F1 Team,8,13,132
+2026-01,Australian Grand Prix,Charles Leclerc,Ferrari,4,3,62
+2026-01,Australian Grand Prix,Max Verstappen,Red Bull,20,6,109
+2026-01,Australian Grand Prix,Lando Norris,McLaren,6,5,22
+2026-01,Australian Grand Prix,Esteban Ocon,Haas F1 Team,13,11,206
+2026-01,Australian Grand Prix,Sergio Pérez,Cadillac F1 Team,18,16,235
+2026-01,Australian Grand Prix,Oscar Piastri,McLaren,5,21,30
+2026-01,Australian Grand Prix,George Russell,Mercedes,1,1,11
+2026-01,Australian Grand Prix,Carlos Sainz,Williams,21,15,215
+2026-01,Australian Grand Prix,Lance Stroll,Aston Martin,22,17,301
+2026-02,Chinese Grand Prix,Alexander Albon,Williams,22,22,248
+2026-02,Chinese Grand Prix,Fernando Alonso,Aston Martin,18,17,273
+2026-02,Chinese Grand Prix,Andrea Kimi Antonelli,Mercedes,1,1,53
+2026-02,Chinese Grand Prix,Arvid Lindblad,RB F1 Team,15,12,216
+2026-02,Chinese Grand Prix,Oliver Bearman,Haas F1 Team,10,5,139
+2026-02,Chinese Grand Prix,Gabriel Bortoleto,Audi,16,21,256
+2026-02,Chinese Grand Prix,Valtteri Bottas,Cadillac F1 Team,19,13,311
+2026-02,Chinese Grand Prix,Franco Colapinto,Alpine F1 Team,12,10,207
+2026-02,Chinese Grand Prix,Pierre Gasly,Alpine F1 Team,7,6,121
+2026-02,Chinese Grand Prix,Isack Hadjar,Red Bull,9,8,110
+2026-02,Chinese Grand Prix,Lewis Hamilton,Ferrari,3,3,79
+2026-02,Chinese Grand Prix,Nico Hülkenberg,Audi,11,11,171
+2026-02,Chinese Grand Prix,Liam Lawson,RB F1 Team,14,7,189
+2026-02,Chinese Grand Prix,Charles Leclerc,Ferrari,4,4,16
+2026-02,Chinese Grand Prix,Max Verstappen,Red Bull,8,16,96
+2026-02,Chinese Grand Prix,Lando Norris,McLaren,6,20,41
+2026-02,Chinese Grand Prix,Esteban Ocon,Haas F1 Team,13,14,165
+2026-02,Chinese Grand Prix,Sergio Pérez,Cadillac F1 Team,21,15,294
+2026-02,Chinese Grand Prix,Oscar Piastri,McLaren,5,19,57
+2026-02,Chinese Grand Prix,George Russell,Mercedes,2,2,12
+2026-02,Chinese Grand Prix,Carlos Sainz,Williams,17,9,217
+2026-02,Chinese Grand Prix,Lance Stroll,Aston Martin,20,18,317
+2026-03,Japanese Grand Prix,Alexander Albon,Williams,17,20,257
+2026-03,Japanese Grand Prix,Fernando Alonso,Aston Martin,21,18,290
+2026-03,Japanese Grand Prix,Andrea Kimi Antonelli,Mercedes,1,1,17
+2026-03,Japanese Grand Prix,Arvid Lindblad,RB F1 Team,10,14,140
+2026-03,Japanese Grand Prix,Oliver Bearman,Haas F1 Team,18,22,201
+2026-03,Japanese Grand Prix,Gabriel Bortoleto,Audi,9,13,162
+2026-03,Japanese Grand Prix,Valtteri Bottas,Cadillac F1 Team,20,19,306
+2026-03,Japanese Grand Prix,Franco Colapinto,Alpine F1 Team,15,16,258
+2026-03,Japanese Grand Prix,Pierre Gasly,Alpine F1 Team,7,7,122
+2026-03,Japanese Grand Prix,Isack Hadjar,Red Bull,8,12,111
+2026-03,Japanese Grand Prix,Lewis Hamilton,Ferrari,6,6,80
+2026-03,Japanese Grand Prix,Nico Hülkenberg,Audi,13,11,208
+2026-03,Japanese Grand Prix,Liam Lawson,RB F1 Team,14,9,193
+2026-03,Japanese Grand Prix,Charles Leclerc,Ferrari,4,3,42
+2026-03,Japanese Grand Prix,Max Verstappen,Red Bull,11,8,97
+2026-03,Japanese Grand Prix,Lando Norris,McLaren,5,5,66
+2026-03,Japanese Grand Prix,Esteban Ocon,Haas F1 Team,12,10,166
+2026-03,Japanese Grand Prix,Sergio Pérez,Cadillac F1 Team,19,17,265
+2026-03,Japanese Grand Prix,Oscar Piastri,McLaren,3,2,36
+2026-03,Japanese Grand Prix,George Russell,Mercedes,2,4,14
+2026-03,Japanese Grand Prix,Carlos Sainz,Williams,16,15,226
+2026-03,Japanese Grand Prix,Lance Stroll,Aston Martin,22,21,324
+2026-04,Miami Grand Prix,Alexander Albon,Williams,15,10,266
+2026-04,Miami Grand Prix,Fernando Alonso,Aston Martin,17,15,274
+2026-04,Miami Grand Prix,Andrea Kimi Antonelli,Mercedes,1,1,23
+2026-04,Miami Grand Prix,Arvid Lindblad,RB F1 Team,16,14,223
+2026-04,Miami Grand Prix,Oliver Bearman,Haas F1 Team,12,11,163
+2026-04,Miami Grand Prix,Gabriel Bortoleto,Audi,21,12,268
+2026-04,Miami Grand Prix,Valtteri Bottas,Cadillac F1 Team,19,18,325
+2026-04,Miami Grand Prix,Franco Colapinto,Alpine F1 Team,8,7,133
+2026-04,Miami Grand Prix,Pierre Gasly,Alpine F1 Team,9,21,112
+2026-04,Miami Grand Prix,Isack Hadjar,Red Bull,22,22,167
+2026-04,Miami Grand Prix,Lewis Hamilton,Ferrari,6,6,98
+2026-04,Miami Grand Prix,Nico Hülkenberg,Audi,10,19,172
+2026-04,Miami Grand Prix,Liam Lawson,RB F1 Team,11,20,153
+2026-04,Miami Grand Prix,Charles Leclerc,Ferrari,3,8,43
+2026-04,Miami Grand Prix,Max Verstappen,Red Bull,2,5,67
+2026-04,Miami Grand Prix,Lando Norris,McLaren,4,2,24
+2026-04,Miami Grand Prix,Esteban Ocon,Haas F1 Team,14,13,202
+2026-04,Miami Grand Prix,Sergio Pérez,Cadillac F1 Team,20,16,259
+2026-04,Miami Grand Prix,Oscar Piastri,McLaren,7,3,81
+2026-04,Miami Grand Prix,George Russell,Mercedes,5,4,18
+2026-04,Miami Grand Prix,Carlos Sainz,Williams,13,9,218
+2026-04,Miami Grand Prix,Lance Stroll,Aston Martin,18,17,307
+2026-05,Canadian Grand Prix,Alexander Albon,Williams,18,21,260
+2026-05,Canadian Grand Prix,Fernando Alonso,Aston Martin,19,20,291
+2026-05,Canadian Grand Prix,Andrea Kimi Antonelli,Mercedes,2,1,25
+2026-05,Canadian Grand Prix,Arvid Lindblad,RB F1 Team,9,22,123
+2026-05,Canadian Grand Prix,Oliver Bearman,Haas F1 Team,16,10,243
+2026-05,Canadian Grand Prix,Gabriel Bortoleto,Audi,13,13,209
+2026-05,Canadian Grand Prix,Valtteri Bottas,Cadillac F1 Team,21,16,312
+2026-05,Canadian Grand Prix,Franco Colapinto,Alpine F1 Team,10,6,149
+2026-05,Canadian Grand Prix,Pierre Gasly,Alpine F1 Team,14,8,219
+2026-05,Canadian Grand Prix,Isack Hadjar,Red Bull,7,5,113
+2026-05,Canadian Grand Prix,Lewis Hamilton,Ferrari,5,2,68
+2026-05,Canadian Grand Prix,Nico Hülkenberg,Audi,11,12,168
+2026-05,Canadian Grand Prix,Liam Lawson,RB F1 Team,12,7,150
+2026-05,Canadian Grand Prix,Charles Leclerc,Ferrari,8,4,99
+2026-05,Canadian Grand Prix,Max Verstappen,Red Bull,6,3,82
+2026-05,Canadian Grand Prix,Lando Norris,McLaren,3,18,31
+2026-05,Canadian Grand Prix,Esteban Ocon,Haas F1 Team,17,14,220
+2026-05,Canadian Grand Prix,Sergio Pérez,Cadillac F1 Team,20,17,284
+2026-05,Canadian Grand Prix,Oscar Piastri,McLaren,4,11,54
+2026-05,Canadian Grand Prix,George Russell,Mercedes,1,19,1
+2026-05,Canadian Grand Prix,Carlos Sainz,Williams,15,9,194
+2026-05,Canadian Grand Prix,Lance Stroll,Aston Martin,22,15,318
+2026-06,Monaco Grand Prix,Alexander Albon,Williams,11,8,173
+2026-06,Monaco Grand Prix,Fernando Alonso,Aston Martin,21,10,295
+2026-06,Monaco Grand Prix,Andrea Kimi Antonelli,Mercedes,1,1,2
+2026-06,Monaco Grand Prix,Arvid Lindblad,RB F1 Team,15,6,227
+2026-06,Monaco Grand Prix,Oliver Bearman,Haas F1 Team,19,20,241
+2026-06,Monaco Grand Prix,Gabriel Bortoleto,Audi,16,11,261
+2026-06,Monaco Grand Prix,Valtteri Bottas,Cadillac F1 Team,20,21,319
+2026-06,Monaco Grand Prix,Franco Colapinto,Alpine F1 Team,14,14,210
+2026-06,Monaco Grand Prix,Pierre Gasly,Alpine F1 Team,9,7,124
+2026-06,Monaco Grand Prix,Isack Hadjar,Red Bull,5,3,104
+2026-06,Monaco Grand Prix,Lewis Hamilton,Ferrari,3,2,58
+2026-06,Monaco Grand Prix,Nico Hülkenberg,Audi,13,13,195
+2026-06,Monaco Grand Prix,Liam Lawson,RB F1 Team,10,5,141
+2026-06,Monaco Grand Prix,Charles Leclerc,Ferrari,4,17,63
+2026-06,Monaco Grand Prix,Max Verstappen,Red Bull,2,22,26
+2026-06,Monaco Grand Prix,Lando Norris,McLaren,8,19,105
+2026-06,Monaco Grand Prix,Esteban Ocon,Haas F1 Team,17,9,211
+2026-06,Monaco Grand Prix,Sergio Pérez,Cadillac F1 Team,18,15,275
+2026-06,Monaco Grand Prix,Oscar Piastri,McLaren,7,4,88
+2026-06,Monaco Grand Prix,George Russell,Mercedes,6,12,32
+2026-06,Monaco Grand Prix,Carlos Sainz,Williams,12,16,154
+2026-06,Monaco Grand Prix,Lance Stroll,Aston Martin,22,18,313
+2026-07,Barcelona Grand Prix,Alexander Albon,Williams,18,18,262
+2026-07,Barcelona Grand Prix,Fernando Alonso,Aston Martin,22,19,285
+2026-07,Barcelona Grand Prix,Andrea Kimi Antonelli,Mercedes,3,16,33
+2026-07,Barcelona Grand Prix,Arvid Lindblad,RB F1 Team,11,9,155
+2026-07,Barcelona Grand Prix,Oliver Bearman,Haas F1 Team,15,17,224
+2026-07,Barcelona Grand Prix,Gabriel Bortoleto,Audi,12,11,174
+2026-07,Barcelona Grand Prix,Valtteri Bottas,Cadillac F1 Team,20,21,314
+2026-07,Barcelona Grand Prix,Franco Colapinto,Alpine F1 Team,13,10,184
+2026-07,Barcelona Grand Prix,Pierre Gasly,Alpine F1 Team,14,7,198
+2026-07,Barcelona Grand Prix,Isack Hadjar,Red Bull,6,6,92
+2026-07,Barcelona Grand Prix,Lewis Hamilton,Ferrari,2,1,44
+2026-07,Barcelona Grand Prix,Nico Hülkenberg,Audi,9,20,142
+2026-07,Barcelona Grand Prix,Liam Lawson,RB F1 Team,8,8,125
+2026-07,Barcelona Grand Prix,Charles Leclerc,Ferrari,10,15,114
+2026-07,Barcelona Grand Prix,Max Verstappen,Red Bull,5,4,69
+2026-07,Barcelona Grand Prix,Lando Norris,McLaren,4,3,37
+2026-07,Barcelona Grand Prix,Esteban Ocon,Haas F1 Team,17,13,249
+2026-07,Barcelona Grand Prix,Sergio Pérez,Cadillac F1 Team,19,14,292
+2026-07,Barcelona Grand Prix,Oscar Piastri,McLaren,7,5,89
+2026-07,Barcelona Grand Prix,George Russell,Mercedes,1,2,3
+2026-07,Barcelona Grand Prix,Carlos Sainz,Williams,16,12,228
+2026-07,Barcelona Grand Prix,Lance Stroll,Aston Martin,21,22,320
+2026-08,Austrian Grand Prix,Alexander Albon,Williams,18,17,263
+2026-08,Austrian Grand Prix,Fernando Alonso,Aston Martin,21,18,298
+2026-08,Austrian Grand Prix,Andrea Kimi Antonelli,Mercedes,4,3,27
+2026-08,Austrian Grand Prix,Arvid Lindblad,RB F1 Team,10,10,143
+2026-08,Austrian Grand Prix,Oliver Bearman,Haas F1 Team,13,14,190
+2026-08,Austrian Grand Prix,Gabriel Bortoleto,Audi,12,11,175
+2026-08,Austrian Grand Prix,Valtteri Bottas,Cadillac F1 Team,20,22,302
+2026-08,Austrian Grand Prix,Franco Colapinto,Alpine F1 Team,16,15,203
+2026-08,Austrian Grand Prix,Pierre Gasly,Alpine F1 Team,11,13,156
+2026-08,Austrian Grand Prix,Isack Hadjar,Red Bull,8,6,115
+2026-08,Austrian Grand Prix,Lewis Hamilton,Ferrari,3,5,64
+2026-08,Austrian Grand Prix,Nico Hülkenberg,Audi,14,12,236
+2026-08,Austrian Grand Prix,Liam Lawson,RB F1 Team,9,9,126
+2026-08,Austrian Grand Prix,Charles Leclerc,Ferrari,2,8,34
+2026-08,Austrian Grand Prix,Max Verstappen,Red Bull,5,2,70
+2026-08,Austrian Grand Prix,Lando Norris,McLaren,6,7,75
+2026-08,Austrian Grand Prix,Esteban Ocon,Haas F1 Team,15,16,212
+2026-08,Austrian Grand Prix,Sergio Pérez,Cadillac F1 Team,19,21,276
+2026-08,Austrian Grand Prix,Oscar Piastri,McLaren,7,4,100
+2026-08,Austrian Grand Prix,George Russell,Mercedes,1,1,4
+2026-08,Austrian Grand Prix,Carlos Sainz,Williams,17,20,244
+2026-08,Austrian Grand Prix,Lance Stroll,Aston Martin,22,19,326
+2026-09,British Grand Prix,Alexander Albon,Williams,16,21,264
+2026-09,British Grand Prix,Fernando Alonso,Aston Martin,21,18,299
+2026-09,British Grand Prix,Andrea Kimi Antonelli,Mercedes,1,15,5
+2026-09,British Grand Prix,Arvid Lindblad,RB F1 Team,9,7,134
+2026-09,British Grand Prix,Oliver Bearman,Haas F1 Team,13,12,199
+2026-09,British Grand Prix,Gabriel Bortoleto,Audi,11,8,157
+2026-09,British Grand Prix,Valtteri Bottas,Cadillac F1 Team,18,16,303
+2026-09,British Grand Prix,Franco Colapinto,Alpine F1 Team,19,9,229
+2026-09,British Grand Prix,Pierre Gasly,Alpine F1 Team,15,10,181
+2026-09,British Grand Prix,Isack Hadjar,Red Bull,5,5,101
+2026-09,British Grand Prix,Lewis Hamilton,Ferrari,3,3,45
+2026-09,British Grand Prix,Nico Hülkenberg,Audi,12,22,182
+2026-09,British Grand Prix,Liam Lawson,RB F1 Team,10,6,137
+2026-09,British Grand Prix,Charles Leclerc,Ferrari,2,1,48
+2026-09,British Grand Prix,Max Verstappen,Red Bull,7,20,83
+2026-09,British Grand Prix,Lando Norris,McLaren,6,4,71
+2026-09,British Grand Prix,Esteban Ocon,Haas F1 Team,17,13,230
+2026-09,British Grand Prix,Sergio Pérez,Cadillac F1 Team,20,14,277
+2026-09,British Grand Prix,Oscar Piastri,McLaren,8,11,116
+2026-09,British Grand Prix,George Russell,Mercedes,4,2,19
+2026-09,British Grand Prix,Carlos Sainz,Williams,14,17,245
+2026-09,British Grand Prix,Lance Stroll,Aston Martin,22,19,327
+2026-10,Belgian Grand Prix,Alexander Albon,Williams,15,15,267
+2026-10,Belgian Grand Prix,Fernando Alonso,Aston Martin,22,19,300
+2026-10,Belgian Grand Prix,Andrea Kimi Antonelli,Mercedes,1,1,15
+2026-10,Belgian Grand Prix,Arvid Lindblad,RB F1 Team,7,9,117
+2026-10,Belgian Grand Prix,Oliver Bearman,Haas F1 Team,14,14,225
+2026-10,Belgian Grand Prix,Gabriel Bortoleto,Audi,8,8,164
+2026-10,Belgian Grand Prix,Valtteri Bottas,Cadillac F1 Team,17,18,308
+2026-10,Belgian Grand Prix,Franco Colapinto,Alpine F1 Team,11,10,185
+2026-10,Belgian Grand Prix,Pierre Gasly,Alpine F1 Team,10,11,169
+2026-10,Belgian Grand Prix,Isack Hadjar,Red Bull,21,6,144
+2026-10,Belgian Grand Prix,Lewis Hamilton,Ferrari,5,4,72
+2026-10,Belgian Grand Prix,Nico Hülkenberg,Audi,12,13,200
+2026-10,Belgian Grand Prix,Liam Lawson,RB F1 Team,9,12,127
+2026-10,Belgian Grand Prix,Charles Leclerc,Ferrari,4,2,55
+2026-10,Belgian Grand Prix,Max Verstappen,Red Bull,2,3,38
+2026-10,Belgian Grand Prix,Lando Norris,McLaren,13,7,93
+2026-10,Belgian Grand Prix,Esteban Ocon,Haas F1 Team,16,17,231
+2026-10,Belgian Grand Prix,Sergio Pérez,Cadillac F1 Team,18,21,269
+2026-10,Belgian Grand Prix,Oscar Piastri,McLaren,6,5,90
+2026-10,Belgian Grand Prix,George Russell,Mercedes,3,22,13
+2026-10,Belgian Grand Prix,Carlos Sainz,Williams,19,16,250
+2026-10,Belgian Grand Prix,Lance Stroll,Aston Martin,20,20,321
+2026-11,Hungarian Grand Prix,Alexander Albon,Williams,19,17,286
+2026-11,Hungarian Grand Prix,Fernando Alonso,Aston Martin,16,14,278
+2026-11,Hungarian Grand Prix,Andrea Kimi Antonelli,Mercedes,7,3,49
+2026-11,Hungarian Grand Prix,Arvid Lindblad,RB F1 Team,9,10,128
+2026-11,Hungarian Grand Prix,Oliver Bearman,Haas F1 Team,17,19,237
+2026-11,Hungarian Grand Prix,Gabriel Bortoleto,Audi,14,11,204
+2026-11,Hungarian Grand Prix,Valtteri Bottas,Cadillac F1 Team,21,22,304
+2026-11,Hungarian Grand Prix,Franco Colapinto,Alpine F1 Team,13,15,186
+2026-11,Hungarian Grand Prix,Pierre Gasly,Alpine F1 Team,12,12,158
+2026-11,Hungarian Grand Prix,Isack Hadjar,Red Bull,8,6,118
+2026-11,Hungarian Grand Prix,Lewis Hamilton,Ferrari,5,5,84
+2026-11,Hungarian Grand Prix,Nico Hülkenberg,Audi,10,9,176
+2026-11,Hungarian Grand Prix,Liam Lawson,RB F1 Team,11,8,145
+2026-11,Hungarian Grand Prix,Charles Leclerc,Ferrari,2,4,28
+2026-11,Hungarian Grand Prix,Max Verstappen,Red Bull,4,2,76
+2026-11,Hungarian Grand Prix,Lando Norris,McLaren,1,1,6
+2026-11,Hungarian Grand Prix,Esteban Ocon,Haas F1 Team,15,16,213
+2026-11,Hungarian Grand Prix,Sergio Pérez,Cadillac F1 Team,22,21,279
+2026-11,Hungarian Grand Prix,Oscar Piastri,McLaren,3,20,73
+2026-11,Hungarian Grand Prix,George Russell,Mercedes,6,7,65
+2026-11,Hungarian Grand Prix,Carlos Sainz,Williams,18,18,251
+2026-11,Hungarian Grand Prix,Lance Stroll,Aston Martin,20,13,328
+2026-12,Dutch Grand Prix,Alexander Albon,Williams,16,17,270
+2026-12,Dutch Grand Prix,Fernando Alonso,Aston Martin,18,9,287
+2026-12,Dutch Grand Prix,Andrea Kimi Antonelli,Mercedes,3,2,20
+2026-12,Dutch Grand Prix,Arvid Lindblad,RB F1 Team,10,12,129
+2026-12,Dutch Grand Prix,Oliver Bearman,Haas F1 Team,20,21,238
+2026-12,Dutch Grand Prix,Gabriel Bortoleto,Audi,9,13,146
+2026-12,Dutch Grand Prix,Valtteri Bottas,Cadillac F1 Team,21,18,329
+2026-12,Dutch Grand Prix,Franco Colapinto,Alpine F1 Team,14,14,191
+2026-12,Dutch Grand Prix,Pierre Gasly,Alpine F1 Team,11,10,159
+2026-12,Dutch Grand Prix,Lewis Hamilton,Ferrari,5,4,85
+2026-12,Dutch Grand Prix,Nico Hülkenberg,Audi,13,8,196
+2026-12,Dutch Grand Prix,Liam Lawson,Red Bull,8,7,119
+2026-12,Dutch Grand Prix,Charles Leclerc,Ferrari,6,5,50
+2026-12,Dutch Grand Prix,Max Verstappen,Red Bull,7,22,91
+2026-12,Dutch Grand Prix,Lando Norris,McLaren,1,1,46
+2026-12,Dutch Grand Prix,Esteban Ocon,Haas F1 Team,15,19,221
+2026-12,Dutch Grand Prix,Sergio Pérez,Cadillac F1 Team,22,15,280
+2026-12,Dutch Grand Prix,Oscar Piastri,McLaren,4,6,77
+2026-12,Dutch Grand Prix,George Russell,Mercedes,2,3,7
+2026-12,Dutch Grand Prix,Carlos Sainz,Williams,17,16,252
+2026-12,Dutch Grand Prix,Lance Stroll,Aston Martin,19,20,309
+2026-12,Dutch Grand Prix,Yuki Tsunoda,RB F1 Team,12,11,177
+2026-13,Italian Grand Prix,Alexander Albon,Williams,20,17,281
+2026-13,Italian Grand Prix,Fernando Alonso,Aston Martin,21,21,296
+2026-13,Italian Grand Prix,Andrea Kimi Antonelli,Mercedes,19,1,102
+2026-13,Italian Grand Prix,Arvid Lindblad,RB F1 Team,9,8,130
+2026-13,Italian Grand Prix,Oliver Bearman,Haas F1 Team,11,15,214
+2026-13,Italian Grand Prix,Gabriel Bortoleto,Audi,10,11,178
+2026-13,Italian Grand Prix,Valtteri Bottas,Cadillac F1 Team,16,19,305
+2026-13,Italian Grand Prix,Franco Colapinto,Alpine F1 Team,7,9,147
+2026-13,Italian Grand Prix,Pierre Gasly,Alpine F1 Team,1,7,106
+2026-13,Italian Grand Prix,Lewis Hamilton,Ferrari,4,6,59
+2026-13,Italian Grand Prix,Nico Hülkenberg,Audi,12,12,187
+2026-13,Italian Grand Prix,Liam Lawson,Red Bull,22,14,160
+2026-13,Italian Grand Prix,Charles Leclerc,Ferrari,3,22,21
+2026-13,Italian Grand Prix,Max Verstappen,Red Bull,5,3,47
+2026-13,Italian Grand Prix,Lando Norris,McLaren,8,4,94
+2026-13,Italian Grand Prix,Esteban Ocon,Haas F1 Team,14,16,253
+2026-13,Italian Grand Prix,Sergio Pérez,Cadillac F1 Team,17,18,271
+2026-13,Italian Grand Prix,Oscar Piastri,McLaren,6,5,60
+2026-13,Italian Grand Prix,George Russell,Mercedes,2,2,8
+2026-13,Italian Grand Prix,Carlos Sainz,Williams,13,13,239
+2026-13,Italian Grand Prix,Lance Stroll,Aston Martin,18,20,322
+2026-13,Italian Grand Prix,Yuki Tsunoda,RB F1 Team,15,10,205
+2026-14,Spanish Grand Prix,Alexander Albon,Williams,16,15,272
+2026-14,Spanish Grand Prix,Fernando Alonso,Aston Martin,17,17,282
+2026-14,Spanish Grand Prix,Andrea Kimi Antonelli,Mercedes,2,1,9
+2026-14,Spanish Grand Prix,Arvid Lindblad,RB F1 Team,10,9,135
+2026-14,Spanish Grand Prix,Oliver Bearman,Haas F1 Team,22,16,242
+2026-14,Spanish Grand Prix,Gabriel Bortoleto,Audi,12,13,179
+2026-14,Spanish Grand Prix,Valtteri Bottas,Cadillac F1 Team,19,18,330
+2026-14,Spanish Grand Prix,Franco Colapinto,Alpine F1 Team,9,7,138
+2026-14,Spanish Grand Prix,Pierre Gasly,Alpine F1 Team,14,12,197
+2026-14,Spanish Grand Prix,Lewis Hamilton,Ferrari,4,22,86
+2026-14,Spanish Grand Prix,Nico Hülkenberg,Audi,11,10,161
+2026-14,Spanish Grand Prix,Liam Lawson,Red Bull,8,6,120
+2026-14,Spanish Grand Prix,Charles Leclerc,Ferrari,5,4,74
+2026-14,Spanish Grand Prix,Max Verstappen,Red Bull,3,2,51
+2026-14,Spanish Grand Prix,Lando Norris,McLaren,1,3,29
+2026-14,Spanish Grand Prix,Esteban Ocon,Haas F1 Team,13,11,222
+2026-14,Spanish Grand Prix,Sergio Pérez,Cadillac F1 Team,18,20,288
+2026-14,Spanish Grand Prix,Oscar Piastri,McLaren,7,8,103
+2026-14,Spanish Grand Prix,George Russell,Mercedes,6,5,39
+2026-14,Spanish Grand Prix,Carlos Sainz,Williams,20,19,246
+2026-14,Spanish Grand Prix,Lance Stroll,Aston Martin,21,21,310
+2026-14,Spanish Grand Prix,Yuki Tsunoda,RB F1 Team,15,14,192
+2026-15,Azerbaijan Grand Prix,Alexander Albon,Williams,12,20,240
+2026-15,Azerbaijan Grand Prix,Fernando Alonso,Aston Martin,21,21,293
+2026-15,Azerbaijan Grand Prix,Andrea Kimi Antonelli,Mercedes,16,5,108
+2026-15,Azerbaijan Grand Prix,Arvid Lindblad,RB F1 Team,15,7,180
+2026-15,Azerbaijan Grand Prix,Oliver Bearman,Haas F1 Team,10,9,188
+2026-15,Azerbaijan Grand Prix,Gabriel Bortoleto,Audi,17,15,232
+2026-15,Azerbaijan Grand Prix,Valtteri Bottas,Cadillac F1 Team,19,16,315
+2026-15,Azerbaijan Grand Prix,Franco Colapinto,Alpine F1 Team,9,17,151
+2026-15,Azerbaijan Grand Prix,Pierre Gasly,Alpine F1 Team,7,18,131
+2026-15,Azerbaijan Grand Prix,Isack Hadjar,Red Bull,4,3,61
+2026-15,Azerbaijan Grand Prix,Lewis Hamilton,Ferrari,6,6,87
+2026-15,Azerbaijan Grand Prix,Nico Hülkenberg,Audi,18,11,233
+2026-15,Azerbaijan Grand Prix,Liam Lawson,RB F1 Team,11,12,148
+2026-15,Azerbaijan Grand Prix,Charles Leclerc,Ferrari,2,4,56
+2026-15,Azerbaijan Grand Prix,Max Verstappen,Red Bull,8,2,107
+2026-15,Azerbaijan Grand Prix,Lando Norris,McLaren,5,19,40
+2026-15,Azerbaijan Grand Prix,Esteban Ocon,Haas F1 Team,13,8,254
+2026-15,Azerbaijan Grand Prix,Sergio Pérez,Cadillac F1 Team,20,14,289
+2026-15,Azerbaijan Grand Prix,Oscar Piastri,McLaren,3,13,35
+2026-15,Azerbaijan Grand Prix,George Russell,Mercedes,1,1,10
+2026-15,Azerbaijan Grand Prix,Carlos Sainz,Williams,14,10,234
+2026-15,Azerbaijan Grand Prix,Lance Stroll,Aston Martin,22,22,323
