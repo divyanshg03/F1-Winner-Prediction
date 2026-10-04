@@ -24,6 +24,14 @@ What survives scrutiny:
 
 ![edge](reports/figures/02_edge_over_time.png)
 
+## Final model and decisions
+
+**Use for race week: the post-qualifying winner-probability ensemble** (conditional logit + LightGBM + neural net, temperature-calibrated), trained on 2016-2024 and tested on the unseen 2025 season: **0.946 log-loss vs 1.111 for the grid** (paired +0.166 nats/race, 95% CI +0.042 to +0.283; 62% top-1 vs 67% for pole, so the gain is in probability quality, not in naming the winner). Details: [`reports/final_model_findings.md`](reports/final_model_findings.md). `python scripts/predict_next.py --refresh` freezes the prediction for the next race (never overwrites an existing frozen file).
+
+**Tried and not adopted** (each tested with the same walk-forward / unseen-season rules, none held up): sequence nets and Llama 3.1 8B ([`llm_findings.md`](reports/llm_findings.md)), a lap-by-lap race simulator v1 and v2 reactive-strategy ([`sim_v2_findings.md`](reports/sim_v2_findings.md)), extra feature groups ([`feature_search_findings.md`](reports/feature_search_findings.md)), trees / Plackett-Luce / Elo / chaos split ([`v3_findings.md`](reports/v3_findings.md)), and a whole-finishing-order model: it ties "finish where you start" (Spearman ~0.66 vs 0.65, exact position ~14-17% vs 15-18%; [`position_findings.md`](reports/position_findings.md)). Before qualifying the model is unreliable (21% top-1 in 2025) and should not be used.
+
+**Live scorecard.** Race 16 (Bahrain GP in Malaysia, 4 Oct 2026): frozen pre-race call gave Verstappen 67% (top pick); he won from pole. Log-loss 0.397 (random guessing: 3.0). One race says little about a probabilistic model; see [`predictions/`](predictions/) for every frozen call and its scored result.
+
 ## Try it: interactive demo
 
 ```bash
