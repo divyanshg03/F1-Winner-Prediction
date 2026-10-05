@@ -51,6 +51,19 @@ The first start takes about a minute (it builds the features and trains the mode
 - races marked with a star have a **frozen pre-race prediction** with its timestamp, commit and (once the race has run) the scored result;
 - **grid what-if**: edit starting positions (each slot once) and re-predict to see what a grid slot is worth. What-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
 
+## Deploy
+
+The demo ships as a small container (no PyTorch at serving time: the model is pre-trained and its weights live in `deploy/serve/`). Tested locally: 621 MB image, ready in about 4 seconds, about 116 MB of RAM under a hard 512 MB cap.
+
+```bash
+docker build -t f1-demo .
+docker run -p 7860:7860 f1-demo        # http://localhost:7860
+```
+
+- **Render (free tier):** New + Blueprint, point it at this repo (`render.yaml` is included). A free instance sleeps when idle, so the first request after a quiet spell takes a while.
+- **Any container host** (Koyeb, Fly.io, Cloud Run, ...) works with the same `Dockerfile`; it honours `$PORT`.
+- After new races are added, refresh the weights with `python scripts/build_serve_artifacts.py` and commit `deploy/serve/`.
+
 ## Forward predictions
 
 `scripts/predict_next.py` trains on every completed race, scores the next one, and freezes a timestamped JSON (with git commit) into [`predictions/`](predictions/) **before the race**. Those files are the audit trail: the repo records the call, then the result.

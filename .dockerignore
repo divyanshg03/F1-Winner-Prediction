@@ -1,0 +1,12 @@
+.git
+legacy
+articles
+docs
+models
+catboost_info
+data/raw
+data/*.log
+data/*.err
+data/shots
+**/__pycache__
+.venv
