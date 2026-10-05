@@ -2,6 +2,8 @@
 
 **Calibrated, backtested probabilities for who wins a Formula 1 Grand Prix, and an honest account of how much anyone can know.**
 
+**[Live demo](https://f1-winner-predictor.onrender.com/)** (free hosting: the first visit after a quiet spell can take a minute to wake up)
+
 ![headline](reports/figures/01_headline.png)
 
 ## The short version

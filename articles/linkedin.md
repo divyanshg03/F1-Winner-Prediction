@@ -21,6 +21,7 @@ I also froze the next race prediction in the repo before lights-out, so it can b
 
 The lesson: optimise for being hard to fool, not for the number that looks good.
 
+Live demo (pick any race, see grid vs finish vs the model's call): https://f1-winner-predictor.onrender.com/
 Full write-up, code and one-command reproduction in the comments.
 
 #MachineLearning #DataScience #Formula1 #Forecasting
