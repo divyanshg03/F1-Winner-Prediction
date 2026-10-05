@@ -51,9 +51,18 @@ The first start takes about a minute (it builds the features and trains the mode
 - races marked with a star have a **frozen pre-race prediction** with its timestamp, commit and (once the race has run) the scored result;
 - **grid what-if**: edit starting positions (each slot once) and re-predict to see what a grid slot is worth. What-ifs use a model trained on all completed races, so for past races they are illustrative, not out-of-sample.
 
-## Deploy (Hugging Face Spaces)
+## Deploy
 
-A `Dockerfile` serves the demo on port 7860 (CPU-only PyTorch, about 1.8 GB image; tested locally). To publish it as a Space: `hf auth login`, then `scripts/push_to_hf_space.sh divyanshg03/f1-winner-predictor`. Any container host works with the same image.
+The demo ships as a small container (no PyTorch at serving time: the model is pre-trained and its weights live in `deploy/serve/`). Tested locally: 621 MB image, ready in about 4 seconds, about 116 MB of RAM under a hard 512 MB cap.
+
+```bash
+docker build -t f1-demo .
+docker run -p 7860:7860 f1-demo        # http://localhost:7860
+```
+
+- **Render (free tier):** New + Blueprint, point it at this repo (`render.yaml` is included). A free instance sleeps when idle, so the first request after a quiet spell takes a while.
+- **Any container host** (Koyeb, Fly.io, Cloud Run, ...) works with the same `Dockerfile`; it honours `$PORT`.
+- After new races are added, refresh the weights with `python scripts/build_serve_artifacts.py` and commit `deploy/serve/`.
 
 ## Forward predictions
 

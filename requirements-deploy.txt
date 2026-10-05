@@ -5,4 +5,3 @@ lightgbm
 requests
 fastapi
 uvicorn
-scikit-learn

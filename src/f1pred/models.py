@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
-import torch
 
 
 def race_softmax(score: np.ndarray, race_ids: np.ndarray) -> np.ndarray:
@@ -68,6 +67,8 @@ class ConditionalLogit:
         return Xp, mask, win
 
     def fit(self, X, y, race_ids):
+        import torch  # only training needs torch; serving does not
+
         self.std = _Std().fit(X)
         Xp, mask, win = self._pack(self.std(X), y, race_ids)
         Xt = torch.tensor(Xp, dtype=torch.float64)

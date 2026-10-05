@@ -18,25 +18,20 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from f1pred import backtest as B
 from f1pred import features as F
 from f1pred.models import race_softmax
+from f1pred.serve import ServeModel
 
 app = FastAPI(title="F1 Winner Predictor")
 
 DF = F.make(include_future=True).sort_values(["date", "round"]).reset_index(drop=True)
-TRAIN = DF[DF.won.notna()]
-MODELS = {}
-for name in ("logit_post", "gbm_post"):
-    mk, cols = B.MODELS[name]
-    MODELS[name] = (mk().fit(TRAIN[cols].to_numpy(float), TRAIN.won.to_numpy(), TRAIN.race_key.to_numpy()), cols)
+MODEL = ServeModel(ROOT / "deploy" / "serve")  # pre-trained weights: no training (and no PyTorch) at startup
 BT = pd.read_csv(ROOT / "reports" / "backtest_scores.csv")
 FROZEN = {p.stem: json.loads(p.read_text(encoding="utf8")) for p in (ROOT / "predictions").glob("*.json")}
 
 
 def live_probs(rows: pd.DataFrame) -> np.ndarray:
-    s = sum(0.5 * m.score(rows[c].to_numpy(float)) for m, c in MODELS.values())
-    return race_softmax(s, np.zeros(len(rows), dtype=int))
+    return race_softmax(MODEL.score(rows[MODEL.cols].to_numpy(float)), np.zeros(len(rows), dtype=int))
 
 
 def _winner(key):
