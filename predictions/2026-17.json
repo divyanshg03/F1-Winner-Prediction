@@ -1,0 +1,144 @@
+{
+  "race": "Singapore Grand Prix",
+  "race_key": "2026-17",
+  "race_date": "2026-10-11",
+  "generated_utc": "2026-10-11T09:53:48+00:00",
+  "git_commit": "8203162",
+  "model": "post-qualifying ensemble (logit + LightGBM + neural net), refit on 230 completed races (2016-)",
+  "temperature": 0.8669347983898805,
+  "note": "grid = qualifying order (penalties not yet applied)",
+  "probabilities": [
+    {
+      "driver": "Max Verstappen",
+      "constructor": "Red Bull",
+      "grid": 1,
+      "p_win": 0.7168
+    },
+    {
+      "driver": "Charles Leclerc",
+      "constructor": "Ferrari",
+      "grid": 2,
+      "p_win": 0.1193
+    },
+    {
+      "driver": "Andrea Kimi Antonelli",
+      "constructor": "Mercedes",
+      "grid": 4,
+      "p_win": 0.0771
+    },
+    {
+      "driver": "Lewis Hamilton",
+      "constructor": "Ferrari",
+      "grid": 3,
+      "p_win": 0.0329
+    },
+    {
+      "driver": "Lando Norris",
+      "constructor": "McLaren",
+      "grid": 5,
+      "p_win": 0.0217
+    },
+    {
+      "driver": "George Russell",
+      "constructor": "Mercedes",
+      "grid": 6,
+      "p_win": 0.0173
+    },
+    {
+      "driver": "Oscar Piastri",
+      "constructor": "McLaren",
+      "grid": 7,
+      "p_win": 0.0066
+    },
+    {
+      "driver": "Isack Hadjar",
+      "constructor": "Red Bull",
+      "grid": 22,
+      "p_win": 0.0023
+    },
+    {
+      "driver": "Liam Lawson",
+      "constructor": "RB F1 Team",
+      "grid": 9,
+      "p_win": 0.002
+    },
+    {
+      "driver": "Arvid Lindblad",
+      "constructor": "RB F1 Team",
+      "grid": 10,
+      "p_win": 0.0012
+    },
+    {
+      "driver": "Pierre Gasly",
+      "constructor": "Alpine F1 Team",
+      "grid": 8,
+      "p_win": 0.001
+    },
+    {
+      "driver": "Nico H\u00fclkenberg",
+      "constructor": "Audi",
+      "grid": 11,
+      "p_win": 0.0006
+    },
+    {
+      "driver": "Oliver Bearman",
+      "constructor": "Haas F1 Team",
+      "grid": 12,
+      "p_win": 0.0003
+    },
+    {
+      "driver": "Gabriel Bortoleto",
+      "constructor": "Audi",
+      "grid": 15,
+      "p_win": 0.0002
+    },
+    {
+      "driver": "Franco Colapinto",
+      "constructor": "Alpine F1 Team",
+      "grid": 16,
+      "p_win": 0.0002
+    },
+    {
+      "driver": "Esteban Ocon",
+      "constructor": "Haas F1 Team",
+      "grid": 13,
+      "p_win": 0.0002
+    },
+    {
+      "driver": "Carlos Sainz",
+      "constructor": "Williams",
+      "grid": 14,
+      "p_win": 0.0001
+    },
+    {
+      "driver": "Fernando Alonso",
+      "constructor": "Aston Martin",
+      "grid": 17,
+      "p_win": 0.0
+    },
+    {
+      "driver": "Alexander Albon",
+      "constructor": "Williams",
+      "grid": 18,
+      "p_win": 0.0
+    },
+    {
+      "driver": "Lance Stroll",
+      "constructor": "Aston Martin",
+      "grid": 19,
+      "p_win": 0.0
+    },
+    {
+      "driver": "Sergio P\u00e9rez",
+      "constructor": "Cadillac F1 Team",
+      "grid": 20,
+      "p_win": 0.0
+    },
+    {
+      "driver": "Valtteri Bottas",
+      "constructor": "Cadillac F1 Team",
+      "grid": 21,
+      "p_win": 0.0
+    }
+  ]
+}

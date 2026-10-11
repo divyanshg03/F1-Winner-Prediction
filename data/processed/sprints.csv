@@ -589,3 +589,25 @@ season,round,race_name,date,circuit_id,session,driver_id,driver,constructor_id,c
 2026,12,Dutch Grand Prix,2026-08-23,zandvoort,sprint,sainz,Carlos Sainz,williams,Williams,20,20,21,0,23,Lapped
 2026,12,Dutch Grand Prix,2026-08-23,zandvoort,sprint,perez,Sergio Pérez,cadillac,Cadillac F1 Team,21,21,20,0,21,Lapped
 2026,12,Dutch Grand Prix,2026-08-23,zandvoort,sprint,hulkenberg,Nico Hülkenberg,audi,Audi,22,R,14,0,7,Lapped
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,max_verstappen,Max Verstappen,red_bull,Red Bull,1,1,1,8,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,hamilton,Lewis Hamilton,ferrari,Ferrari,2,2,6,7,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,leclerc,Charles Leclerc,ferrari,Ferrari,3,3,3,6,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,4,4,7,5,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,lawson,Liam Lawson,rb,RB F1 Team,5,5,8,4,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,bearman,Oliver Bearman,haas,Haas F1 Team,6,6,13,3,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,hulkenberg,Nico Hülkenberg,audi,Audi,7,7,12,2,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,norris,Lando Norris,mclaren,McLaren,8,8,5,1,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,gasly,Pierre Gasly,alpine,Alpine F1 Team,9,9,10,0,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,ocon,Esteban Ocon,haas,Haas F1 Team,10,10,16,0,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,alonso,Fernando Alonso,aston_martin,Aston Martin,11,11,15,0,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,sainz,Carlos Sainz,williams,Williams,12,12,22,0,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,13,13,17,0,20,Finished
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,piastri,Oscar Piastri,mclaren,McLaren,14,14,4,0,19,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,albon,Alexander Albon,williams,Williams,15,R,19,0,14,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,bortoleto,Gabriel Bortoleto,audi,Audi,16,R,14,0,6,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,17,R,21,0,6,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,hadjar,Isack Hadjar,red_bull,Red Bull,18,R,9,0,2,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,colapinto,Franco Colapinto,alpine,Alpine F1 Team,19,R,11,0,2,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,russell,George Russell,mercedes,Mercedes,20,R,2,0,1,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,perez,Sergio Pérez,cadillac,Cadillac F1 Team,21,R,20,0,1,Retired
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,sprint,stroll,Lance Stroll,aston_martin,Aston Martin,22,R,18,0,0,Retired

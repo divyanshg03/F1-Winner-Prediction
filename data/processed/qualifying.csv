@@ -5435,3 +5435,25 @@ season,round,race_name,date,circuit_id,session,driver_id,driver,constructor_id,c
 2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,sepang,qualifying,albon,Alexander Albon,williams,Williams,20,,1:38.600,,
 2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,sepang,qualifying,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,21,,1:38.611,,
 2026,16,Bahrain Grand Prix in Malaysia,2026-10-04,sepang,qualifying,perez,Sergio Pérez,cadillac,Cadillac F1 Team,22,,1:38.933,,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,max_verstappen,Max Verstappen,red_bull,Red Bull,1,,1:33.241,1:31.639,1:31.373
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,leclerc,Charles Leclerc,ferrari,Ferrari,2,,1:32.774,1:31.953,1:31.427
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,hamilton,Lewis Hamilton,ferrari,Ferrari,3,,1:32.429,1:31.529,1:31.496
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,antonelli,Andrea Kimi Antonelli,mercedes,Mercedes,4,,1:33.601,1:32.079,1:31.562
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,norris,Lando Norris,mclaren,McLaren,5,,1:32.775,1:31.895,1:31.712
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,russell,George Russell,mercedes,Mercedes,6,,1:33.617,1:32.212,1:31.747
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,piastri,Oscar Piastri,mclaren,McLaren,7,,1:33.076,1:32.245,1:31.860
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,gasly,Pierre Gasly,alpine,Alpine F1 Team,8,,1:33.182,1:32.602,1:32.225
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,lawson,Liam Lawson,rb,RB F1 Team,9,,1:32.885,1:32.319,1:32.369
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,arvid_lindblad,Arvid Lindblad,rb,RB F1 Team,10,,1:33.288,1:32.498,1:32.781
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,hulkenberg,Nico Hülkenberg,audi,Audi,11,,1:33.147,1:32.784,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,bearman,Oliver Bearman,haas,Haas F1 Team,12,,1:33.356,1:32.908,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,ocon,Esteban Ocon,haas,Haas F1 Team,13,,1:33.803,1:33.323,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,sainz,Carlos Sainz,williams,Williams,14,,1:33.774,1:33.526,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,bortoleto,Gabriel Bortoleto,audi,Audi,15,,1:34.169,1:33.658,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,colapinto,Franco Colapinto,alpine,Alpine F1 Team,16,,1:33.261,1:33.787,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,alonso,Fernando Alonso,aston_martin,Aston Martin,17,,1:34.223,,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,albon,Alexander Albon,williams,Williams,18,,1:34.289,,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,stroll,Lance Stroll,aston_martin,Aston Martin,19,,1:34.946,,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,perez,Sergio Pérez,cadillac,Cadillac F1 Team,20,,1:35.123,,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,bottas,Valtteri Bottas,cadillac,Cadillac F1 Team,21,,1:35.984,,
+2026,17,Singapore Grand Prix,2026-10-11,marina_bay,qualifying,hadjar,Isack Hadjar,red_bull,Red Bull,22,,,,
